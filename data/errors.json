@@ -1,0 +1,4652 @@
+{
+  "errors": {
+    "2": {
+      "code": 2,
+      "severity": "error",
+      "message_en": "The API call \"_replaceable_value_\" is invalid or not supported in this release.",
+      "message_ja": "APIコール「_replaceable_value_」は無効、またはこのバージョンでサポートされていません。",
+      "solution_ja": "正しいAPIコール名を確認してください。eBay APIのバージョンが最新か確認し、廃止されたAPIを使用していないか確認してください。",
+      "category": "api"
+    },
+    "3": {
+      "code": 3,
+      "severity": "error",
+      "message_en": "The specified API error level is unsupported in this release.",
+      "message_ja": "指定されたAPIエラーレベルはこのバージョンでサポートされていません。",
+      "solution_ja": "エラーレベルの指定を見直してください。サポートされている値（Short/Long）を使用してください。",
+      "category": "api"
+    },
+    "5": {
+      "code": 5,
+      "severity": "error",
+      "message_en": "XML Error Text: \"_replaceable_value_\".",
+      "message_ja": "XMLの解析エラーが発生しました：「_replaceable_value_」",
+      "solution_ja": "送信しているXMLの構文を確認してください。タグの閉じ忘れや特殊文字のエスケープ漏れがないか確認してください。",
+      "category": "api"
+    },
+    "9": {
+      "code": 9,
+      "severity": "error",
+      "message_en": "The integer supplied is out of range. Valid range: \"_replaceable_value_\".",
+      "message_ja": "指定された整数値が範囲外です。有効範囲：「_replaceable_value_」",
+      "solution_ja": "指定した数値がエラーメッセージに表示される有効範囲内か確認してください。",
+      "category": "api"
+    },
+    "13": {
+      "code": 13,
+      "severity": "error",
+      "message_en": "No XML <request> entity found in XML request.",
+      "message_ja": "XMLリクエスト内に<request>タグが見つかりません。",
+      "solution_ja": "APIリクエストのXML構造を確認し、<request>タグが正しく含まれているか確認してください。",
+      "category": "api"
+    },
+    "14": {
+      "code": 14,
+      "severity": "error",
+      "message_en": "No XML <Verb> entity found in XML request.",
+      "message_ja": "XMLリクエスト内に<Verb>タグが見つかりません。",
+      "solution_ja": "APIリクエストに操作を指定する<Verb>タグを追加してください。",
+      "category": "api"
+    },
+    "15": {
+      "code": 15,
+      "severity": "error",
+      "message_en": "No XML <DetailLevel> entity found in XML request.",
+      "message_ja": "XMLリクエスト内に<DetailLevel>タグが見つかりません。",
+      "solution_ja": "リクエストに<DetailLevel>タグを追加してください。ReturnAll等の値を指定します。",
+      "category": "api"
+    },
+    "16": {
+      "code": 16,
+      "severity": "warning",
+      "message_en": "Not found, defaulted to short (0).",
+      "message_ja": "<ErrorLevel>タグが見つからなかったため、デフォルト値（Short）が使用されました。",
+      "solution_ja": "必要に応じて<ErrorLevel>タグを明示的に指定してください。通常はこの警告を無視しても問題ありません。",
+      "category": "api"
+    },
+    "17": {
+      "code": 17,
+      "severity": "error",
+      "message_en": "Listing deleted or you are not the seller.",
+      "message_ja": "出品が削除されたか、あなたがセラーではないためアクセスできません。",
+      "solution_ja": "出品番号（ItemID）が正しいか確認してください。削除済みの出品にはアクセスできません。自分の出品であることを確認してください。",
+      "category": "listing"
+    },
+    "19": {
+      "code": 19,
+      "severity": "error",
+      "message_en": "No XML <RequestUserId> entity found in XML request.",
+      "message_ja": "XMLリクエスト内に<RequestUserId>タグが見つかりません。",
+      "solution_ja": "リクエストに<RequestUserId>タグを追加してユーザーIDを指定してください。",
+      "category": "auth"
+    },
+    "20": {
+      "code": 20,
+      "severity": "error",
+      "message_en": "No XML <RequestPassword> entity found in XML request.",
+      "message_ja": "XMLリクエスト内に<RequestPassword>タグが見つかりません。",
+      "solution_ja": "リクエストに<RequestPassword>タグを追加してください。ただし、現在はAuthTokenの使用が推奨されています。",
+      "category": "auth"
+    },
+    "21": {
+      "code": 21,
+      "severity": "error",
+      "message_en": "User \"_replaceable_value_\" not found in database.",
+      "message_ja": "ユーザー「_replaceable_value_」がデータベースに見つかりません。",
+      "solution_ja": "ユーザーIDが正しいか確認してください。スペルミスがないか確認してください。",
+      "category": "account"
+    },
+    "24": {
+      "code": 24,
+      "severity": "error",
+      "message_en": "Unhandled exception occurred in request handler.",
+      "message_ja": "リクエスト処理中に予期しないエラーが発生しました。",
+      "solution_ja": "eBayシステム側の内部エラーです。しばらく待ってからリトライしてください。繰り返し発生する場合はeBayサポートに問い合わせてください。",
+      "category": "api"
+    },
+    "25": {
+      "code": 25,
+      "severity": "error",
+      "message_en": "Logo size \"_replaceable_value_\" is invalid.",
+      "message_ja": "ロゴサイズ「_replaceable_value_」が無効です。",
+      "solution_ja": "有効なロゴサイズを指定してください。eBayの規定サイズを確認してください。",
+      "category": "listing"
+    },
+    "26": {
+      "code": 26,
+      "severity": "error",
+      "message_en": "Site ID entered is invalid.",
+      "message_ja": "指定されたサイトIDが無効です。",
+      "solution_ja": "正しいサイトIDを使用してください。例：US=0, UK=3, DE=77, AU=15。",
+      "category": "api"
+    },
+    "31": {
+      "code": 31,
+      "severity": "error",
+      "message_en": "Account for userid \"_replaceable_value_\" has been closed.",
+      "message_ja": "ユーザーID「_replaceable_value_」のアカウントは閉鎖されています。",
+      "solution_ja": "このアカウントは既に閉鎖されています。別のアカウントを使用するか、eBayサポートに問い合わせてください。",
+      "category": "account"
+    },
+    "32": {
+      "code": 32,
+      "severity": "error",
+      "message_en": "Account for userid \"_replaceable_value_\" not confirmed or suspended.",
+      "message_ja": "ユーザーID「_replaceable_value_」のアカウントは未確認またはサスペンド中です。",
+      "solution_ja": "アカウントの登録確認メールを完了するか、サスペンドの場合はeBayサポートに連絡して解除手続きをしてください。",
+      "category": "account"
+    },
+    "33": {
+      "code": 33,
+      "severity": "error",
+      "message_en": "Detail information for UserId \"_replaceable_value_\" not found.",
+      "message_ja": "ユーザーID「_replaceable_value_」の詳細情報が見つかりません。",
+      "solution_ja": "ユーザーIDが正しいか確認してください。アカウントが存在しない可能性があります。",
+      "category": "account"
+    },
+    "34": {
+      "code": 34,
+      "severity": "error",
+      "message_en": "Request missing required input tag \"_replaceable_value_\".",
+      "message_ja": "リクエストに必須タグ「_replaceable_value_」がありません。",
+      "solution_ja": "エラーメッセージに表示されている必須タグをリクエストに追加してください。",
+      "category": "api"
+    },
+    "35": {
+      "code": 35,
+      "severity": "error",
+      "message_en": "Username/password pair not valid.",
+      "message_ja": "ユーザー名/パスワードの組み合わせが無効です。",
+      "solution_ja": "認証情報を確認してください。AuthTokenを使用する方式への移行を推奨します。",
+      "category": "auth"
+    },
+    "36": {
+      "code": 36,
+      "severity": "error",
+      "message_en": "Error number \"_replaceable_value_\" occurred processing request.",
+      "message_ja": "リクエスト処理中にエラー番号「_replaceable_value_」が発生しました。",
+      "solution_ja": "表示されたエラー番号の詳細を確認してください。eBayの一時的な障害の可能性もあるため、しばらく待ってリトライしてください。",
+      "category": "api"
+    },
+    "37": {
+      "code": 37,
+      "severity": "error",
+      "message_en": "Input data for tag <_replaceable_value_> invalid or missing.",
+      "message_ja": "タグ<_replaceable_value_>のデータが無効または不足しています。",
+      "solution_ja": "指定されたタグに正しい値を設定してください。データ型（数値、文字列など）が正しいか確認してください。",
+      "category": "api"
+    },
+    "38": {
+      "code": 38,
+      "severity": "error",
+      "message_en": "Request missing required value in input tag _replaceable_value_.",
+      "message_ja": "入力タグ「_replaceable_value_」に必須の値がありません。",
+      "solution_ja": "指定されたタグに値を設定してください。空タグのままになっていないか確認してください。",
+      "category": "api"
+    },
+    "39": {
+      "code": 39,
+      "severity": "error",
+      "message_en": "Data for tags _replaceable_value_ mutually exclusive.",
+      "message_ja": "タグ「_replaceable_value_」のデータは同時に指定できません。",
+      "solution_ja": "排他的な設定項目を同時に指定しています。どちらか一方のみを指定してください。",
+      "category": "api"
+    },
+    "40": {
+      "code": 40,
+      "severity": "error",
+      "message_en": "No image supplied for Gallery.",
+      "message_ja": "ギャラリー用の画像が提供されていません。",
+      "solution_ja": "出品にギャラリー画像を追加してください。検索結果に表示される画像なので、商品の魅力が伝わる写真を設定してください。",
+      "category": "listing"
+    },
+    "41": {
+      "code": 41,
+      "severity": "error",
+      "message_en": "Error needs translation into API error.",
+      "message_ja": "内部エラーをAPIエラーに変換する必要があります。",
+      "solution_ja": "eBayの内部エラーです。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "42": {
+      "code": 42,
+      "severity": "error",
+      "message_en": "Item number missing in input.",
+      "message_ja": "入力にアイテム番号がありません。",
+      "solution_ja": "リクエストにItemID（出品番号）を指定してください。",
+      "category": "listing"
+    },
+    "45": {
+      "code": 45,
+      "severity": "error",
+      "message_en": "Specify user ID for feedback.",
+      "message_ja": "フィードバック対象のユーザーIDを指定してください。",
+      "solution_ja": "フィードバックを残す相手のユーザーIDをリクエストに含めてください。",
+      "category": "feedback"
+    },
+    "46": {
+      "code": 46,
+      "severity": "error",
+      "message_en": "Comment type not selected.",
+      "message_ja": "コメントの種類が選択されていません。",
+      "solution_ja": "フィードバックの種類（Positive/Neutral/Negative）を選択してください。",
+      "category": "feedback"
+    },
+    "47": {
+      "code": 47,
+      "severity": "error",
+      "message_en": "Comment missing in input.",
+      "message_ja": "コメントが入力されていません。",
+      "solution_ja": "フィードバックのコメント本文を入力してください。",
+      "category": "feedback"
+    },
+    "48": {
+      "code": 48,
+      "severity": "error",
+      "message_en": "Comment exceeds length limit.",
+      "message_ja": "コメントが文字数制限を超えています。",
+      "solution_ja": "フィードバックコメントを80文字以内に収めてください。",
+      "category": "feedback"
+    },
+    "49": {
+      "code": 49,
+      "severity": "error",
+      "message_en": "Not allowed to leave feedback.",
+      "message_ja": "フィードバックを残す権限がありません。",
+      "solution_ja": "取引の当事者（売り手または買い手）のみフィードバックを残せます。取引が完了しているか確認してください。",
+      "category": "feedback"
+    },
+    "50": {
+      "code": 50,
+      "severity": "error",
+      "message_en": "Unable to obtain feedback rating.",
+      "message_ja": "フィードバック評価を取得できません。",
+      "solution_ja": "eBayシステムの一時的な問題の可能性があります。しばらく待ってからリトライしてください。",
+      "category": "feedback"
+    },
+    "51": {
+      "code": 51,
+      "severity": "error",
+      "message_en": "Feedback rating insufficient to leave feedback.",
+      "message_ja": "フィードバック評価が低いため、フィードバックを残せません。",
+      "solution_ja": "アカウントのフィードバック評価が制限に達していません。他の取引でフィードバックを獲得してから再度お試しください。",
+      "category": "feedback"
+    },
+    "52": {
+      "code": 52,
+      "severity": "error",
+      "message_en": "Feedback recipient not found.",
+      "message_ja": "フィードバック受信者が見つかりません。",
+      "solution_ja": "相手のユーザーIDが正しいか確認してください。",
+      "category": "feedback"
+    },
+    "53": {
+      "code": 53,
+      "severity": "error",
+      "message_en": "Feedback recipient not registered.",
+      "message_ja": "フィードバック受信者が登録されていません。",
+      "solution_ja": "相手のアカウントが有効か確認してください。未登録のユーザーにはフィードバックを残せません。",
+      "category": "feedback"
+    },
+    "54": {
+      "code": 54,
+      "severity": "error",
+      "message_en": "Feedback recipient not confirmed.",
+      "message_ja": "フィードバック受信者のアカウントが未確認です。",
+      "solution_ja": "相手のアカウントが確認済みでない場合はフィードバックを残せません。",
+      "category": "feedback"
+    },
+    "55": {
+      "code": 55,
+      "severity": "error",
+      "message_en": "Invalid item/transaction or feedback already left.",
+      "message_ja": "無効な取引、またはすでにフィードバック済みです。",
+      "solution_ja": "この取引にはすでにフィードバックを残している可能性があります。取引番号とアイテム番号が正しいか確認してください。",
+      "category": "feedback"
+    },
+    "56": {
+      "code": 56,
+      "severity": "error",
+      "message_en": "Auction reserve price not met.",
+      "message_ja": "オークションの最低落札価格に達していません。",
+      "solution_ja": "入札額がリザーブプライス（最低落札価格）を下回っています。価格を上げて再入札してください。",
+      "category": "listing"
+    },
+    "58": {
+      "code": 58,
+      "severity": "error",
+      "message_en": "Comment violates eBay standards.",
+      "message_ja": "コメントがeBayの基準に違反しています。",
+      "solution_ja": "不適切な表現やeBayのポリシーに違反する言葉を含むコメントは投稿できません。内容を修正してください。",
+      "category": "feedback"
+    },
+    "59": {
+      "code": 59,
+      "severity": "error",
+      "message_en": "Unable to obtain feedback for user.",
+      "message_ja": "ユーザーのフィードバック情報を取得できません。",
+      "solution_ja": "eBayシステムの一時的な問題の可能性があります。しばらく待ってからリトライしてください。",
+      "category": "feedback"
+    },
+    "60": {
+      "code": 60,
+      "severity": "error",
+      "message_en": "Must be eBay member 5+ days to leave feedback.",
+      "message_ja": "フィードバックを残すにはeBay会員登録から5日以上経過している必要があります。",
+      "solution_ja": "アカウント作成から5日以上経過してから再度お試しください。",
+      "category": "feedback"
+    },
+    "61": {
+      "code": 61,
+      "severity": "error",
+      "message_en": "Feedback type not selected.",
+      "message_ja": "フィードバックの種類が選択されていません。",
+      "solution_ja": "フィードバックの種類（Positive/Neutral/Negative）を選択してください。",
+      "category": "feedback"
+    },
+    "62": {
+      "code": 62,
+      "severity": "error",
+      "message_en": "Feedback type invalid.",
+      "message_ja": "フィードバックの種類が無効です。",
+      "solution_ja": "有効なフィードバック種類（Positive、Neutral、Negative）を指定してください。",
+      "category": "feedback"
+    },
+    "63": {
+      "code": 63,
+      "severity": "error",
+      "message_en": "LeaveFeedback temporarily unavailable.",
+      "message_ja": "フィードバック機能が一時的に利用できません。",
+      "solution_ja": "eBayのシステムメンテナンス中の可能性があります。しばらく待ってからリトライしてください。",
+      "category": "feedback"
+    },
+    "64": {
+      "code": 64,
+      "severity": "error",
+      "message_en": "Update contact info required.",
+      "message_ja": "連絡先情報の更新が必要です。",
+      "solution_ja": "eBayアカウントの連絡先情報を最新の状態に更新してください。My eBay > Account Settingsから更新できます。",
+      "category": "account"
+    },
+    "65": {
+      "code": 65,
+      "severity": "error",
+      "message_en": "Cannot leave feedback for yourself.",
+      "message_ja": "自分自身にフィードバックを残すことはできません。",
+      "solution_ja": "フィードバック対象のユーザーIDが自分のIDと異なることを確認してください。",
+      "category": "feedback"
+    },
+    "66": {
+      "code": 66,
+      "severity": "error",
+      "message_en": "Encoding value not supported.",
+      "message_ja": "指定されたエンコーディング値はサポートされていません。",
+      "solution_ja": "サポートされているエンコーディング（UTF-8等）を使用してください。",
+      "category": "api"
+    },
+    "67": {
+      "code": 67,
+      "severity": "error",
+      "message_en": "Problem in data records (unknown site).",
+      "message_ja": "データレコードに問題があります（不明なサイト）。",
+      "solution_ja": "エンコーディングフィルターの設定を確認してください。正しいサイトIDを指定してください。",
+      "category": "api"
+    },
+    "68": {
+      "code": 68,
+      "severity": "error",
+      "message_en": "Days value _replaceable_value_ not valid.",
+      "message_ja": "日数の値「_replaceable_value_」が無効です。",
+      "solution_ja": "有効な日数の値を指定してください。APIドキュメントで許容される範囲を確認してください。",
+      "category": "api"
+    },
+    "69": {
+      "code": 69,
+      "severity": "error",
+      "message_en": "Title required for item.",
+      "message_ja": "出品タイトルが必要です。",
+      "solution_ja": "出品にタイトルを設定してください。商品を的確に説明する80文字以内のタイトルを入力してください。",
+      "category": "listing"
+    },
+    "70": {
+      "code": 70,
+      "severity": "error",
+      "message_en": "Titles limited to _replaceable_value_ characters.",
+      "message_ja": "タイトルは_replaceable_value_文字以内に制限されています。",
+      "solution_ja": "タイトルを短くしてください。eBayでは通常80文字が上限です。重要なキーワードを優先して簡潔にまとめてください。",
+      "category": "listing"
+    },
+    "71": {
+      "code": 71,
+      "severity": "error",
+      "message_en": "Item location required.",
+      "message_ja": "商品の所在地が必要です。",
+      "solution_ja": "出品に商品の発送元（所在地）を設定してください。",
+      "category": "listing"
+    },
+    "72": {
+      "code": 72,
+      "severity": "error",
+      "message_en": "Location max 45 characters (30 Taiwan).",
+      "message_ja": "所在地は最大45文字（台湾は30文字）までです。",
+      "solution_ja": "商品所在地の文字数を制限内に収めてください。",
+      "category": "listing"
+    },
+    "73": {
+      "code": 73,
+      "severity": "error",
+      "message_en": "Price invalid or below minimum _replaceable_value_.",
+      "message_ja": "価格が無効、または最低価格「_replaceable_value_」を下回っています。",
+      "solution_ja": "有効な価格を設定してください。最低価格以上の金額を指定する必要があります。通常、eBayの最低出品価格は$0.99です。",
+      "category": "listing"
+    },
+    "74": {
+      "code": 74,
+      "severity": "error",
+      "message_en": "Start price too large to be legitimate.",
+      "message_ja": "開始価格が大きすぎて不正な値と判断されました。",
+      "solution_ja": "開始価格が現実的な金額か確認してください。入力ミスの可能性があります。",
+      "category": "listing"
+    },
+    "75": {
+      "code": 75,
+      "severity": "error",
+      "message_en": "Reserve price too large to be legitimate.",
+      "message_ja": "最低落札価格が大きすぎて不正な値と判断されました。",
+      "solution_ja": "リザーブプライスが現実的な金額か確認してください。",
+      "category": "listing"
+    },
+    "76": {
+      "code": 76,
+      "severity": "error",
+      "message_en": "Start price appears negative.",
+      "message_ja": "開始価格がマイナスになっています。",
+      "solution_ja": "開始価格に正の数値を指定してください。",
+      "category": "listing"
+    },
+    "77": {
+      "code": 77,
+      "severity": "error",
+      "message_en": "Reserve price appears negative.",
+      "message_ja": "最低落札価格がマイナスになっています。",
+      "solution_ja": "リザーブプライスに正の数値を指定してください。",
+      "category": "listing"
+    },
+    "78": {
+      "code": 78,
+      "severity": "error",
+      "message_en": "Start price must be whole number.",
+      "message_ja": "開始価格は整数でなければなりません。",
+      "solution_ja": "一部のカテゴリ・通貨では小数点以下が使えません。整数の価格を指定してください。",
+      "category": "listing"
+    },
+    "79": {
+      "code": 79,
+      "severity": "error",
+      "message_en": "Quantity missing, invalid, or zero.",
+      "message_ja": "数量が未入力、無効、またはゼロです。",
+      "solution_ja": "1以上の有効な数量を指定してください。",
+      "category": "listing"
+    },
+    "80": {
+      "code": 80,
+      "severity": "error",
+      "message_en": "Site doesn't support private listings.",
+      "message_ja": "このサイトではプライベート出品がサポートされていません。",
+      "solution_ja": "プライベート出品の設定を解除してください。すべてのeBayサイトがこの機能をサポートしているわけではありません。",
+      "category": "listing"
+    },
+    "81": {
+      "code": 81,
+      "severity": "error",
+      "message_en": "Start price must be less than reserve.",
+      "message_ja": "開始価格は最低落札価格より低くなければなりません。",
+      "solution_ja": "開始価格をリザーブプライスより低い金額に設定してください。",
+      "category": "listing"
+    },
+    "82": {
+      "code": 82,
+      "severity": "error",
+      "message_en": "Dutch/BIN/classified items cannot have reserve.",
+      "message_ja": "ダッチオークション、即決、クラシファイド出品にはリザーブプライスを設定できません。",
+      "solution_ja": "リザーブプライスを削除するか、出品形式を通常のオークションに変更してください。",
+      "category": "listing"
+    },
+    "83": {
+      "code": 83,
+      "severity": "error",
+      "message_en": "Duration \"_replaceable_value_\" invalid for category.",
+      "message_ja": "出品期間「_replaceable_value_」はこのカテゴリでは無効です。",
+      "solution_ja": "カテゴリに対応した出品期間（1日、3日、5日、7日、10日、30日、GTC等）を選択してください。",
+      "category": "listing"
+    },
+    "84": {
+      "code": 84,
+      "severity": "error",
+      "message_en": "Gallery URL not understood.",
+      "message_ja": "ギャラリーURLが認識できません。",
+      "solution_ja": "画像URLが正しい形式（http://またはhttps://で始まる）か確認してください。画像ファイルの拡張子（.jpg、.png等）も確認してください。",
+      "category": "listing"
+    },
+    "85": {
+      "code": 85,
+      "severity": "error",
+      "message_en": "Picture URL not understood.",
+      "message_ja": "画像URLが認識できません。",
+      "solution_ja": "画像URLの形式を確認してください。eBay Picture Services（EPS）のURLを使用するか、外部URLが有効でアクセス可能か確認してください。",
+      "category": "listing"
+    },
+    "86": {
+      "code": 86,
+      "severity": "error",
+      "message_en": "Category not valid for site.",
+      "message_ja": "このカテゴリはこのサイトでは無効です。",
+      "solution_ja": "出品先のeBayサイトで有効なカテゴリIDを指定してください。GetCategoriesで最新のカテゴリ一覧を取得できます。",
+      "category": "listing"
+    },
+    "87": {
+      "code": 87,
+      "severity": "error",
+      "message_en": "Category not a leaf category.",
+      "message_ja": "指定されたカテゴリは末端カテゴリではありません。",
+      "solution_ja": "出品にはリーフカテゴリ（最も細かい階層のカテゴリ）を指定する必要があります。より具体的なサブカテゴリを選択してください。",
+      "category": "listing"
+    },
+    "88": {
+      "code": 88,
+      "severity": "error",
+      "message_en": "Category has expired.",
+      "message_ja": "指定されたカテゴリは期限切れです。",
+      "solution_ja": "eBayのカテゴリは定期的に更新されます。GetCategoriesで最新のカテゴリ一覧を取得し、有効なカテゴリIDを使用してください。",
+      "category": "listing"
+    },
+    "89": {
+      "code": 89,
+      "severity": "error",
+      "message_en": "Dutch auctions/quantity prohibited in category.",
+      "message_ja": "このカテゴリではダッチオークション/複数数量の出品が禁止されています。",
+      "solution_ja": "数量を1に設定するか、別のカテゴリを選択してください。",
+      "category": "listing"
+    },
+    "90": {
+      "code": 90,
+      "severity": "error",
+      "message_en": "Super featured not allowed in category.",
+      "message_ja": "このカテゴリではスーパーフィーチャーが利用できません。",
+      "solution_ja": "スーパーフィーチャーオプションを外してください。",
+      "category": "listing"
+    },
+    "94": {
+      "code": 94,
+      "severity": "error",
+      "message_en": "Cannot edit/relist from different site.",
+      "message_ja": "別のサイトから出品の編集/再出品はできません。",
+      "solution_ja": "出品を作成した同じeBayサイト（例：ebay.com）から編集してください。",
+      "category": "listing"
+    },
+    "95": {
+      "code": 95,
+      "severity": "error",
+      "message_en": "Auction currency doesn't match site.",
+      "message_ja": "オークションの通貨がサイトと一致しません。",
+      "solution_ja": "出品先サイトに対応する通貨を使用してください。例：ebay.com→USD、ebay.co.uk→GBP。",
+      "category": "listing"
+    },
+    "96": {
+      "code": 96,
+      "severity": "error",
+      "message_en": "Conflicting shipping terms specified.",
+      "message_ja": "矛盾する配送条件が指定されています。",
+      "solution_ja": "配送設定を見直してください。送料無料と有料送料を同時に指定するなど、矛盾する設定がないか確認してください。",
+      "category": "shipping"
+    },
+    "97": {
+      "code": 97,
+      "severity": "error",
+      "message_en": "Conflicting shipping locations specified.",
+      "message_ja": "矛盾する配送先が指定されています。",
+      "solution_ja": "配送先の設定を見直してください。除外地域と配送対象地域に矛盾がないか確認してください。",
+      "category": "shipping"
+    },
+    "98": {
+      "code": 98,
+      "severity": "error",
+      "message_en": "No shipping region selected.",
+      "message_ja": "配送地域が選択されていません。",
+      "solution_ja": "少なくとも1つの配送先地域を選択してください。",
+      "category": "shipping"
+    },
+    "99": {
+      "code": 99,
+      "severity": "error",
+      "message_en": "Adult items cannot use eBay Payments.",
+      "message_ja": "アダルトカテゴリの商品はeBay Paymentsを使用できません。",
+      "solution_ja": "アダルトカテゴリの出品では別の支払い方法を設定してください。",
+      "category": "payment"
+    },
+    "100": {
+      "code": 100,
+      "severity": "error",
+      "message_en": "Services category cannot use eBay Payments.",
+      "message_ja": "サービスカテゴリではeBay Paymentsを使用できません。",
+      "solution_ja": "サービスカテゴリの出品では別の支払い方法を設定してください。",
+      "category": "payment"
+    },
+    "101": {
+      "code": 101,
+      "severity": "error",
+      "message_en": "eBay Payments US sites only, USD required.",
+      "message_ja": "eBay PaymentsはUSサイトのみ、USD通貨が必要です。",
+      "solution_ja": "eBay Paymentsを使用する場合はUSサイトでUSD通貨を指定してください。",
+      "category": "payment"
+    },
+    "102": {
+      "code": 102,
+      "severity": "error",
+      "message_en": "eBay Payments not available with Premier.",
+      "message_ja": "Premier設定ではeBay Paymentsが利用できません。",
+      "solution_ja": "支払い方法の設定を見直してください。",
+      "category": "payment"
+    },
+    "103": {
+      "code": 103,
+      "severity": "error",
+      "message_en": "Must select credit cards or checks.",
+      "message_ja": "クレジットカードまたは小切手を選択する必要があります。",
+      "solution_ja": "支払い方法でクレジットカードまたは小切手のいずれかを選択してください。",
+      "category": "payment"
+    },
+    "104": {
+      "code": 104,
+      "severity": "error",
+      "message_en": "Must select credit cards only.",
+      "message_ja": "クレジットカードのみを選択する必要があります。",
+      "solution_ja": "この出品形式ではクレジットカード支払いのみが許可されています。",
+      "category": "payment"
+    },
+    "105": {
+      "code": 105,
+      "severity": "error",
+      "message_en": "Feedback/store pricing requirements not met.",
+      "message_ja": "フィーチャー出品に必要なフィードバック数/ストア条件を満たしていません。",
+      "solution_ja": "フィーチャー出品にはフィードバックスコアやストアの条件があります。条件を満たしてから再度お試しください。",
+      "category": "listing"
+    },
+    "106": {
+      "code": 106,
+      "severity": "error",
+      "message_en": "Description required for listing.",
+      "message_ja": "出品に商品説明が必要です。",
+      "solution_ja": "商品説明（Description）を入力してください。商品の状態、サイズ、特徴などを詳しく記載してください。",
+      "category": "listing"
+    },
+    "107": {
+      "code": 107,
+      "severity": "error",
+      "message_en": "Category invalid, select another.",
+      "message_ja": "カテゴリが無効です。別のカテゴリを選択してください。",
+      "solution_ja": "有効なカテゴリIDを指定してください。GetCategoriesで最新一覧を取得できます。",
+      "category": "listing"
+    },
+    "115": {
+      "code": 115,
+      "severity": "error",
+      "message_en": "Reserve must be <= original listing.",
+      "message_ja": "リザーブプライスは元の出品以下でなければなりません。",
+      "solution_ja": "再出品時のリザーブプライスは元の出品と同額以下に設定してください。",
+      "category": "listing"
+    },
+    "116": {
+      "code": 116,
+      "severity": "error",
+      "message_en": "Credit card declined or account past due.",
+      "message_ja": "クレジットカードが拒否された、またはアカウントに未払いがあります。",
+      "solution_ja": "eBayアカウントの支払い情報を更新してください。未払いの手数料がある場合は先に精算してください。",
+      "category": "account"
+    },
+    "117": {
+      "code": 117,
+      "severity": "error",
+      "message_en": "Unregistered users cannot complete request.",
+      "message_ja": "未登録ユーザーはこのリクエストを実行できません。",
+      "solution_ja": "eBayアカウントの登録を完了してからリクエストしてください。",
+      "category": "account"
+    },
+    "118": {
+      "code": 118,
+      "severity": "error",
+      "message_en": "Resolve outstanding complaints first.",
+      "message_ja": "未解決の苦情を先に解決してください。",
+      "solution_ja": "アカウントに未解決の問題があります。eBayの「Resolution Center」で問題を解決してから再度お試しください。",
+      "category": "account"
+    },
+    "119": {
+      "code": 119,
+      "severity": "error",
+      "message_en": "Low feedback rating prevents request.",
+      "message_ja": "フィードバック評価が低いため、リクエストが拒否されました。",
+      "solution_ja": "フィードバック評価を改善する必要があります。取引を重ねてPositiveフィードバックを獲得してください。",
+      "category": "account"
+    },
+    "120": {
+      "code": 120,
+      "severity": "error",
+      "message_en": "Need additional info for seller account.",
+      "message_ja": "セラーアカウントに追加情報が必要です。",
+      "solution_ja": "eBayのセラー登録を完了してください。支払い情報や本人確認が必要な場合があります。",
+      "category": "account"
+    },
+    "121": {
+      "code": 121,
+      "severity": "error",
+      "message_en": "Update payment method to continue.",
+      "message_ja": "支払い方法を更新する必要があります。",
+      "solution_ja": "eBayアカウントの支払い方法を更新してください。有効なクレジットカードまたは銀行口座を登録してください。",
+      "category": "account"
+    },
+    "122": {
+      "code": 122,
+      "severity": "error",
+      "message_en": "Cannot list until payment made.",
+      "message_ja": "未払いがあるため出品できません。",
+      "solution_ja": "eBayへの未払い手数料を精算してください。精算後に出品が可能になります。",
+      "category": "account"
+    },
+    "124": {
+      "code": 124,
+      "severity": "error",
+      "message_en": "API developer \"_replaceable_value_\" not found.",
+      "message_ja": "API開発者「_replaceable_value_」が見つかりません。",
+      "solution_ja": "Developer IDが正しいか確認してください。eBay Developer Programで登録状況を確認してください。",
+      "category": "auth"
+    },
+    "126": {
+      "code": 126,
+      "severity": "error",
+      "message_en": "API developer \"_replaceable_value_\" inactive.",
+      "message_ja": "API開発者「_replaceable_value_」は無効状態です。",
+      "solution_ja": "開発者アカウントを有効化してください。eBay Developer Portalで状態を確認してください。",
+      "category": "auth"
+    },
+    "127": {
+      "code": 127,
+      "severity": "error",
+      "message_en": "API application \"_replaceable_value_\" invalid.",
+      "message_ja": "APIアプリケーション「_replaceable_value_」が無効です。",
+      "solution_ja": "App IDが正しいか確認してください。eBay Developer Portalでアプリケーション設定を確認してください。",
+      "category": "auth"
+    },
+    "129": {
+      "code": 129,
+      "severity": "error",
+      "message_en": "API \"_replaceable_value_\" inactive.",
+      "message_ja": "API「_replaceable_value_」は無効状態です。",
+      "solution_ja": "APIアプリケーションを有効化してください。eBay Developer Portalで確認できます。",
+      "category": "auth"
+    },
+    "131": {
+      "code": 131,
+      "severity": "error",
+      "message_en": "Provided certificate invalid.",
+      "message_ja": "提供された証明書が無効です。",
+      "solution_ja": "Cert IDが正しいか確認してください。eBay Developer Portalで最新の認証情報を取得してください。",
+      "category": "auth"
+    },
+    "133": {
+      "code": 133,
+      "severity": "error",
+      "message_en": "Developer ID in certificate invalid.",
+      "message_ja": "証明書内のDeveloper IDが無効です。",
+      "solution_ja": "Developer IDを確認してください。正しいID/証明書の組み合わせを使用してください。",
+      "category": "auth"
+    },
+    "135": {
+      "code": 135,
+      "severity": "error",
+      "message_en": "Application ID in certificate invalid.",
+      "message_ja": "証明書内のApplication IDが無効です。",
+      "solution_ja": "App IDを確認してください。Developer Portalで最新の認証情報を取得してください。",
+      "category": "auth"
+    },
+    "137": {
+      "code": 137,
+      "severity": "error",
+      "message_en": "User ID in certificate doesn't match.",
+      "message_ja": "証明書内のユーザーIDが一致しません。",
+      "solution_ja": "認証トークンが正しいユーザーに紐付いているか確認してください。トークンの再発行が必要な場合があります。",
+      "category": "auth"
+    },
+    "139": {
+      "code": 139,
+      "severity": "error",
+      "message_en": "Session certificate has expired.",
+      "message_ja": "セッション証明書の有効期限が切れています。",
+      "solution_ja": "新しい認証トークンを取得してください。トークンの有効期限は通常18ヶ月です。",
+      "category": "auth"
+    },
+    "143": {
+      "code": 143,
+      "severity": "error",
+      "message_en": "Session certificate not found.",
+      "message_ja": "セッション証明書が見つかりません。",
+      "solution_ja": "認証トークンをリクエストヘッダーに含めてください。トークンが正しく設定されているか確認してください。",
+      "category": "auth"
+    },
+    "146": {
+      "code": 146,
+      "severity": "error",
+      "message_en": "Developer/Application ID not numeric.",
+      "message_ja": "Developer IDまたはApplication IDが数値ではありません。",
+      "solution_ja": "IDの形式を確認してください。正しいフォーマットのIDを使用してください。",
+      "category": "auth"
+    },
+    "147": {
+      "code": 147,
+      "severity": "error",
+      "message_en": "Region number invalid.",
+      "message_ja": "リージョン番号が無効です。",
+      "solution_ja": "有効なリージョン番号を指定してください。",
+      "category": "shipping"
+    },
+    "149": {
+      "code": 149,
+      "severity": "error",
+      "message_en": "Gift icons unavailable at site.",
+      "message_ja": "このサイトではギフトアイコンが利用できません。",
+      "solution_ja": "ギフトアイコンのオプションを外してください。",
+      "category": "listing"
+    },
+    "150": {
+      "code": 150,
+      "severity": "error",
+      "message_en": "Cannot list with reserve at site.",
+      "message_ja": "このサイトではリザーブプライス付きの出品ができません。",
+      "solution_ja": "リザーブプライスを削除してください。すべてのeBayサイトがリザーブプライスをサポートしているわけではありません。",
+      "category": "listing"
+    },
+    "151": {
+      "code": 151,
+      "severity": "error",
+      "message_en": "Invalid international shipping region.",
+      "message_ja": "国際配送のリージョンが無効です。",
+      "solution_ja": "有効な国際配送先リージョンを指定してください。eBayのShipping APIで利用可能なリージョン一覧を確認できます。",
+      "category": "shipping"
+    },
+    "152": {
+      "code": 152,
+      "severity": "error",
+      "message_en": "Escrow option invalid.",
+      "message_ja": "エスクローオプションが無効です。",
+      "solution_ja": "エスクローの設定を見直してください。現在、eBayではエスクローはほとんどのカテゴリで廃止されています。",
+      "category": "payment"
+    },
+    "153": {
+      "code": 153,
+      "severity": "error",
+      "message_en": "Item region required.",
+      "message_ja": "商品のリージョンが必要です。",
+      "solution_ja": "商品のリージョン（地域）を指定してください。",
+      "category": "listing"
+    },
+    "154": {
+      "code": 154,
+      "severity": "error",
+      "message_en": "PostalCode exceeds length limit.",
+      "message_ja": "郵便番号が文字数制限を超えています。",
+      "solution_ja": "正しい形式の郵便番号を入力してください。",
+      "category": "listing"
+    },
+    "155": {
+      "code": 155,
+      "severity": "error",
+      "message_en": "Gift icon not valid.",
+      "message_ja": "ギフトアイコンが無効です。",
+      "solution_ja": "有効なギフトアイコンIDを指定するか、ギフトアイコンのオプションを外してください。",
+      "category": "listing"
+    },
+    "156": {
+      "code": 156,
+      "severity": "error",
+      "message_en": "Category blocked for general users.",
+      "message_ja": "このカテゴリは一般ユーザーには制限されています。",
+      "solution_ja": "このカテゴリへの出品には特別な権限が必要です。別のカテゴリを選択するか、eBayに出品許可を申請してください。",
+      "category": "listing"
+    },
+    "157": {
+      "code": 157,
+      "severity": "error",
+      "message_en": "Tax state max 32 characters.",
+      "message_ja": "税金の州名は最大32文字までです。",
+      "solution_ja": "州名を32文字以内に収めてください。",
+      "category": "listing"
+    },
+    "158": {
+      "code": 158,
+      "severity": "error",
+      "message_en": "Payment instructions max 500 characters.",
+      "message_ja": "支払い説明は最大500文字までです。",
+      "solution_ja": "支払い説明を500文字以内に収めてください。",
+      "category": "payment"
+    },
+    "159": {
+      "code": 159,
+      "severity": "error",
+      "message_en": "Feedback 10+ and 60+ day member required.",
+      "message_ja": "フィードバック10以上かつ会員登録60日以上が必要です。",
+      "solution_ja": "ダッチオークションにはフィードバックスコア10以上と60日以上の会員歴が必要です。条件を満たしてから再度お試しください。",
+      "category": "listing"
+    },
+    "160": {
+      "code": 160,
+      "severity": "error",
+      "message_en": "Not allowed to see adult categories.",
+      "message_ja": "アダルトカテゴリの閲覧が許可されていません。",
+      "solution_ja": "アダルトカテゴリへのアクセスにはeBayの年齢確認が必要です。",
+      "category": "listing"
+    },
+    "163": {
+      "code": 163,
+      "severity": "error",
+      "message_en": "Application or developer inactive.",
+      "message_ja": "アプリケーションまたは開発者アカウントが無効です。",
+      "solution_ja": "eBay Developer Portalでアプリケーションと開発者アカウントの状態を確認し、有効化してください。",
+      "category": "auth"
+    },
+    "190": {
+      "code": 190,
+      "severity": "error",
+      "message_en": "BIN >= starting and reserve price.",
+      "message_ja": "即決価格は開始価格およびリザーブプライス以上である必要があります。",
+      "solution_ja": "Buy It Now（即決）価格を開始価格とリザーブプライスの両方より高い金額に設定してください。",
+      "category": "listing"
+    },
+    "191": {
+      "code": 191,
+      "severity": "error",
+      "message_en": "BIN Dutch auctions unsupported.",
+      "message_ja": "ダッチオークションでは即決価格がサポートされていません。",
+      "solution_ja": "ダッチオークション形式では即決価格を設定できません。即決価格を削除するか、出品形式を変更してください。",
+      "category": "listing"
+    },
+    "195": {
+      "code": 195,
+      "severity": "error",
+      "message_en": "BIN price must exceed starting price.",
+      "message_ja": "即決価格は開始価格を上回る必要があります。",
+      "solution_ja": "Buy It Now価格を開始価格より高く設定してください。",
+      "category": "listing"
+    },
+    "196": {
+      "code": 196,
+      "severity": "error",
+      "message_en": "Listing doesn't exist or still active.",
+      "message_ja": "出品が存在しない、またはまだアクティブです。",
+      "solution_ja": "再出品するには出品が終了している必要があります。出品番号が正しいか、出品が終了しているか確認してください。",
+      "category": "listing"
+    },
+    "197": {
+      "code": 197,
+      "severity": "error",
+      "message_en": "Specify 2 different categories.",
+      "message_ja": "2つの異なるカテゴリを指定してください。",
+      "solution_ja": "マルチカテゴリ出品では、プライマリとセカンダリに異なるカテゴリを指定する必要があります。",
+      "category": "listing"
+    },
+    "198": {
+      "code": 198,
+      "severity": "error",
+      "message_en": "Multi-quantity/real estate/adult restricted.",
+      "message_ja": "複数数量/不動産/アダルトカテゴリではマルチカテゴリ出品が制限されています。",
+      "solution_ja": "これらのカテゴリではマルチカテゴリ出品ができません。1つのカテゴリのみを指定してください。",
+      "category": "listing"
+    },
+    "202": {
+      "code": 202,
+      "severity": "error",
+      "message_en": "Multi-category unavailable in automotive.",
+      "message_ja": "自動車カテゴリではマルチカテゴリ出品が利用できません。",
+      "solution_ja": "自動車カテゴリでは1つのカテゴリのみ指定してください。",
+      "category": "listing"
+    },
+    "211": {
+      "code": 211,
+      "severity": "error",
+      "message_en": "User ID not registered.",
+      "message_ja": "ユーザーIDが登録されていません。",
+      "solution_ja": "ユーザーIDが正しいか確認してください。eBayアカウントの登録を完了させてください。",
+      "category": "account"
+    },
+    "212": {
+      "code": 212,
+      "severity": "error",
+      "message_en": "User ID merged/suspended/closed.",
+      "message_ja": "ユーザーIDは統合、サスペンド、または閉鎖されています。",
+      "solution_ja": "このアカウントは使用できません。eBayサポートに問い合わせてアカウント状態を確認してください。",
+      "category": "account"
+    },
+    "214": {
+      "code": 214,
+      "severity": "error",
+      "message_en": "Auction ended, bidding closed.",
+      "message_ja": "オークションは終了し、入札は締め切られました。",
+      "solution_ja": "このオークションは既に終了しています。同じ商品の新しい出品を探すか、セラーに再出品を依頼してください。",
+      "category": "listing"
+    },
+    "228": {
+      "code": 228,
+      "severity": "error",
+      "message_en": "User feedback not found.",
+      "message_ja": "ユーザーのフィードバックが見つかりません。",
+      "solution_ja": "指定したユーザーIDが正しいか確認してください。",
+      "category": "feedback"
+    },
+    "229": {
+      "code": 229,
+      "severity": "error",
+      "message_en": "Detailed feedback comments not found.",
+      "message_ja": "フィードバックの詳細コメントが見つかりません。",
+      "solution_ja": "指定したユーザーまたは取引のフィードバックが存在するか確認してください。",
+      "category": "feedback"
+    },
+    "230": {
+      "code": 230,
+      "severity": "error",
+      "message_en": "PhotoCount doesn't match picture URLs.",
+      "message_ja": "PhotoCountと画像URLの数が一致しません。",
+      "solution_ja": "PhotoCountの値を実際に指定した画像URLの数と一致させてください。",
+      "category": "listing"
+    },
+    "231": {
+      "code": 231,
+      "severity": "error",
+      "message_en": "Item invalid, inactive, or deleted.",
+      "message_ja": "アイテムが無効、非アクティブ、または削除されています。",
+      "solution_ja": "出品番号（ItemID）が正しいか確認してください。削除済みまたは期限切れの出品にはアクセスできません。",
+      "category": "listing"
+    },
+    "238": {
+      "code": 238,
+      "severity": "error",
+      "message_en": "Payment terms invalid for site/category.",
+      "message_ja": "支払い条件がサイト/カテゴリに対して無効です。",
+      "solution_ja": "出品先サイトとカテゴリに対応した支払い方法を設定してください。",
+      "category": "payment"
+    },
+    "240": {
+      "code": 240,
+      "severity": "error",
+      "message_en": "Title/description improper or policy violation.",
+      "message_ja": "タイトル/商品説明が不適切またはポリシー違反です。",
+      "solution_ja": "出品タイトルと商品説明にeBayのポリシーに違反する内容がないか確認してください。禁止ワード、誤解を招く表現、著作権侵害の記述がないか見直してください。",
+      "category": "listing"
+    },
+    "241": {
+      "code": 241,
+      "severity": "warning",
+      "message_en": "Cannot send listing confirmation.",
+      "message_ja": "出品確認メールを送信できません。",
+      "solution_ja": "出品自体は成功していますが、確認メールの送信に失敗しました。eBayのメール設定を確認してください。",
+      "category": "listing"
+    },
+    "245": {
+      "code": 245,
+      "severity": "error",
+      "message_en": "Escrow tags not allowed in real estate.",
+      "message_ja": "不動産カテゴリではエスクロータグは使用できません。",
+      "solution_ja": "不動産出品からエスクロー関連の設定を削除してください。",
+      "category": "listing"
+    },
+    "246": {
+      "code": 246,
+      "severity": "error",
+      "message_en": "PhotoDisplayType exceeds 2 digits.",
+      "message_ja": "PhotoDisplayTypeが2桁を超えています。",
+      "solution_ja": "有効なPhotoDisplayType値を指定してください。",
+      "category": "listing"
+    },
+    "248": {
+      "code": 248,
+      "severity": "error",
+      "message_en": "Database server exception occurred.",
+      "message_ja": "データベースサーバーで例外が発生しました。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "249": {
+      "code": 249,
+      "severity": "error",
+      "message_en": "Database error caused transaction failure.",
+      "message_ja": "データベースエラーにより処理が失敗しました。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。繰り返す場合はeBayサポートに報告してください。",
+      "category": "api"
+    },
+    "250": {
+      "code": 250,
+      "severity": "error",
+      "message_en": "eBay string exception occurred.",
+      "message_ja": "eBayの文字列処理で例外が発生しました。",
+      "solution_ja": "入力データに特殊文字や不正な文字が含まれていないか確認してください。問題が続く場合はeBayサポートに連絡してください。",
+      "category": "api"
+    },
+    "251": {
+      "code": 251,
+      "severity": "error",
+      "message_en": "eBay structured exception occurred.",
+      "message_ja": "eBayの構造化例外が発生しました。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "252": {
+      "code": 252,
+      "severity": "error",
+      "message_en": "GetCategoryListing failed, retry.",
+      "message_ja": "カテゴリ一覧の取得に失敗しました。",
+      "solution_ja": "しばらく待ってからリトライしてください。eBayのサーバーが一時的に応答していない可能性があります。",
+      "category": "api"
+    },
+    "253": {
+      "code": 253,
+      "severity": "error",
+      "message_en": "Order tag (sort) value invalid.",
+      "message_ja": "ソート順の指定値が無効です。",
+      "solution_ja": "有効なソート順の値を指定してください。APIドキュメントで利用可能な値を確認してください。",
+      "category": "search"
+    },
+    "254": {
+      "code": 254,
+      "severity": "error",
+      "message_en": "Modifier tag value invalid.",
+      "message_ja": "修飾子タグの値が無効です。",
+      "solution_ja": "有効な修飾子の値を指定してください。",
+      "category": "search"
+    },
+    "255": {
+      "code": 255,
+      "severity": "error",
+      "message_en": "ViewResults tag value invalid.",
+      "message_ja": "ViewResultsタグの値が無効です。",
+      "solution_ja": "有効なViewResults値を指定してください。",
+      "category": "search"
+    },
+    "258": {
+      "code": 258,
+      "severity": "error",
+      "message_en": "Cannot update item with any bids.",
+      "message_ja": "入札がある商品は更新できません。",
+      "solution_ja": "入札が入った出品は一部の項目のみ変更可能です。入札がない状態でないと大幅な変更はできません。出品を終了して再出品することを検討してください。",
+      "category": "listing"
+    },
+    "283": {
+      "code": 283,
+      "severity": "error",
+      "message_en": "Country ID invalid.",
+      "message_ja": "国コードが無効です。",
+      "solution_ja": "正しい国コード（例：US、GB、JP、DE）を使用してください。",
+      "category": "listing"
+    },
+    "285": {
+      "code": 285,
+      "severity": "error",
+      "message_en": "eTopps listing via eTopps site only.",
+      "message_ja": "eTopps出品はeToppsサイト経由のみです。",
+      "solution_ja": "eTopps商品はeTopps専用サイトから出品してください。",
+      "category": "listing"
+    },
+    "286": {
+      "code": 286,
+      "severity": "error",
+      "message_en": "Check Dutch auction site requirements.",
+      "message_ja": "ダッチオークションのサイト要件を確認してください。",
+      "solution_ja": "出品先サイトのダッチオークション要件（フィードバック数、会員歴等）を満たしているか確認してください。",
+      "category": "listing"
+    },
+    "287": {
+      "code": 287,
+      "severity": "error",
+      "message_en": "Don't meet BIN site requirements.",
+      "message_ja": "即決出品のサイト要件を満たしていません。",
+      "solution_ja": "Buy It Now機能の利用条件を確認してください。フィードバック数等の条件がある場合があります。",
+      "category": "listing"
+    },
+    "290": {
+      "code": 290,
+      "severity": "error",
+      "message_en": "Only seller can modify item.",
+      "message_ja": "出品者のみが商品を変更できます。",
+      "solution_ja": "出品を変更できるのはセラー本人のみです。正しいアカウントでログインしているか確認してください。",
+      "category": "listing"
+    },
+    "291": {
+      "code": 291,
+      "severity": "error",
+      "message_en": "Cannot revise ended listings.",
+      "message_ja": "終了した出品は変更できません。",
+      "solution_ja": "終了済みの出品は編集できません。RelistItemで再出品してから変更してください。",
+      "category": "listing"
+    },
+    "292": {
+      "code": 292,
+      "severity": "error",
+      "message_en": "Not originally 2-category listing.",
+      "message_ja": "元々2カテゴリ出品ではないため、セカンドカテゴリを追加できません。",
+      "solution_ja": "出品時にセカンドカテゴリを指定していなかった場合、後から追加することはできません。新規出品で2カテゴリを指定してください。",
+      "category": "listing"
+    },
+    "300": {
+      "code": 300,
+      "severity": "error",
+      "message_en": "Only seller can perform operation.",
+      "message_ja": "この操作はセラーのみが実行できます。",
+      "solution_ja": "出品者としてログインしているか確認してください。認証トークンが正しいセラーアカウントに紐付いているか確認してください。",
+      "category": "listing"
+    },
+    "301": {
+      "code": 301,
+      "severity": "error",
+      "message_en": "Cannot end if bids/reserve met/12h left.",
+      "message_ja": "入札がある、リザーブ達成済み、または残り12時間以内のため早期終了できません。",
+      "solution_ja": "入札がない状態、かつ残り時間が12時間以上ある場合のみ早期終了できます。条件を確認してください。",
+      "category": "listing"
+    },
+    "302": {
+      "code": 302,
+      "severity": "error",
+      "message_en": "Auction listing type invalid.",
+      "message_ja": "オークション出品の形式が無効です。",
+      "solution_ja": "有効な出品形式（Auction、FixedPrice等）を指定してください。",
+      "category": "listing"
+    },
+    "303": {
+      "code": 303,
+      "severity": "error",
+      "message_en": "Insurance must be 0, 1, or 2.",
+      "message_ja": "保険の値は0、1、または2でなければなりません。",
+      "solution_ja": "保険オプションを正しい値（0=なし、1=任意、2=必須）に設定してください。",
+      "category": "shipping"
+    },
+    "307": {
+      "code": 307,
+      "severity": "error",
+      "message_en": "Invalid start/BIN price.",
+      "message_ja": "開始価格または即決価格が無効です。",
+      "solution_ja": "価格が正の数値で、正しい形式になっているか確認してください。",
+      "category": "listing"
+    },
+    "308": {
+      "code": 308,
+      "severity": "error",
+      "message_en": "Cannot use fixed-price for adult.",
+      "message_ja": "アダルトカテゴリでは固定価格出品が使えません。",
+      "solution_ja": "アダルトカテゴリではオークション形式を使用してください。",
+      "category": "listing"
+    },
+    "309": {
+      "code": 309,
+      "severity": "error",
+      "message_en": "Fixed-price relist start price constraint.",
+      "message_ja": "固定価格再出品の開始価格に制約があります。",
+      "solution_ja": "再出品時の価格が元の出品の制約条件を満たしているか確認してください。",
+      "category": "listing"
+    },
+    "310": {
+      "code": 310,
+      "severity": "error",
+      "message_en": "Cannot list real estate fixed price.",
+      "message_ja": "不動産カテゴリでは固定価格出品ができません。",
+      "solution_ja": "不動産カテゴリではオークション形式またはクラシファイド形式を使用してください。",
+      "category": "listing"
+    },
+    "311": {
+      "code": 311,
+      "severity": "error",
+      "message_en": "Shipping cost required.",
+      "message_ja": "送料の指定が必要です。",
+      "solution_ja": "送料を設定してください。送料無料にする場合は「Free Shipping」を選択してください。",
+      "category": "shipping"
+    },
+    "312": {
+      "code": 312,
+      "severity": "error",
+      "message_en": "Insurance amount required if requested.",
+      "message_ja": "保険を指定する場合は保険金額が必要です。",
+      "solution_ja": "保険オプションを有効にした場合は、保険金額も設定してください。",
+      "category": "shipping"
+    },
+    "313": {
+      "code": 313,
+      "severity": "error",
+      "message_en": "Insurance option/amount mismatch.",
+      "message_ja": "保険オプションと保険金額の設定が一致しません。",
+      "solution_ja": "保険オプションと金額の設定を整合させてください。保険不要の場合は金額を0にしてください。",
+      "category": "shipping"
+    },
+    "314": {
+      "code": 314,
+      "severity": "error",
+      "message_en": "Only store owners create store fixed price.",
+      "message_ja": "ストア固定価格出品はストアオーナーのみが作成できます。",
+      "solution_ja": "eBayストアに登録してからストア固定価格出品を作成してください。",
+      "category": "listing"
+    },
+    "315": {
+      "code": 315,
+      "severity": "error",
+      "message_en": "Inconsistent payment/shipping info.",
+      "message_ja": "支払い情報と配送情報の設定に矛盾があります。",
+      "solution_ja": "支払い方法と配送方法の設定を見直して、整合性のある設定にしてください。",
+      "category": "payment"
+    },
+    "317": {
+      "code": 317,
+      "severity": "error",
+      "message_en": "Sellers cannot purchase own fixed items.",
+      "message_ja": "セラーは自分の固定価格商品を購入できません。",
+      "solution_ja": "自分の出品を自分で購入することはできません。これはeBayのポリシーで禁止されています。",
+      "category": "listing"
+    },
+    "319": {
+      "code": 319,
+      "severity": "error",
+      "message_en": "No store for user \"_replaceable_value_\".",
+      "message_ja": "ユーザー「_replaceable_value_」のストアが存在しません。",
+      "solution_ja": "eBayストアの開設が必要です。eBayのストア登録ページから申し込んでください。",
+      "category": "account"
+    },
+    "320": {
+      "code": 320,
+      "severity": "warning",
+      "message_en": "Store is not open.",
+      "message_ja": "ストアが開いていません。",
+      "solution_ja": "eBayストアを有効化してください。ストアの契約が有効期間内か確認してください。",
+      "category": "account"
+    },
+    "321": {
+      "code": 321,
+      "severity": "error",
+      "message_en": "Must accept credit cards for fixed items.",
+      "message_ja": "固定価格出品ではクレジットカード支払いを受け入れる必要があります。",
+      "solution_ja": "支払い方法にクレジットカードを追加してください。",
+      "category": "payment"
+    },
+    "323": {
+      "code": 323,
+      "severity": "error",
+      "message_en": "Conflicting input tags in request.",
+      "message_ja": "リクエスト内に矛盾するタグがあります。",
+      "solution_ja": "リクエストの設定項目を見直し、矛盾する指定を解消してください。",
+      "category": "api"
+    },
+    "324": {
+      "code": 324,
+      "severity": "error",
+      "message_en": "Listing belongs to different user ID.",
+      "message_ja": "この出品は別のユーザーIDに属しています。",
+      "solution_ja": "正しいアカウントでログインしてください。認証トークンが出品者のものか確認してください。",
+      "category": "listing"
+    },
+    "326": {
+      "code": 326,
+      "severity": "error",
+      "message_en": "PageType must be 0 or 1.",
+      "message_ja": "PageTypeは0または1でなければなりません。",
+      "solution_ja": "PageTypeに0または1を指定してください。",
+      "category": "api"
+    },
+    "327": {
+      "code": 327,
+      "severity": "error",
+      "message_en": "Period must be valid value.",
+      "message_ja": "期間の値が無効です。",
+      "solution_ja": "有効な期間の値を指定してください。",
+      "category": "api"
+    },
+    "328": {
+      "code": 328,
+      "severity": "error",
+      "message_en": "Month must be 0-12.",
+      "message_ja": "月は0〜12の値でなければなりません。",
+      "solution_ja": "0〜12の範囲で月を指定してください。",
+      "category": "account"
+    },
+    "329": {
+      "code": 329,
+      "severity": "error",
+      "message_en": "Year must be 4-digit number.",
+      "message_ja": "年は4桁の数字でなければなりません。",
+      "solution_ja": "年を4桁の数字（例：2024）で指定してください。",
+      "category": "account"
+    },
+    "330": {
+      "code": 330,
+      "severity": "error",
+      "message_en": "If period=2, provide date range.",
+      "message_ja": "period=2の場合、日付範囲を指定する必要があります。",
+      "solution_ja": "カスタム期間を指定する場合は、開始日と終了日の両方を設定してください。",
+      "category": "api"
+    },
+    "331": {
+      "code": 331,
+      "severity": "error",
+      "message_en": "Invalid counter style for site.",
+      "message_ja": "このサイトでは指定されたカウンタースタイルが無効です。",
+      "solution_ja": "サイトに対応した有効なカウンタースタイルを選択してください。",
+      "category": "listing"
+    },
+    "332": {
+      "code": 332,
+      "severity": "error",
+      "message_en": "Account not yet activated.",
+      "message_ja": "アカウントがまだ有効化されていません。",
+      "solution_ja": "eBayアカウントの有効化を完了してください。確認メールが届いているか確認してください。",
+      "category": "account"
+    },
+    "333": {
+      "code": 333,
+      "severity": "error",
+      "message_en": "BeginDate missing/invalid format.",
+      "message_ja": "開始日が不足している、またはフォーマットが無効です。",
+      "solution_ja": "開始日をISO 8601形式（例：2024-01-01T00:00:00.000Z）で指定してください。",
+      "category": "api"
+    },
+    "334": {
+      "code": 334,
+      "severity": "error",
+      "message_en": "EndDate missing/invalid/before start.",
+      "message_ja": "終了日が不足、無効、または開始日より前です。",
+      "solution_ja": "終了日を開始日より後の日付で、正しいフォーマットで指定してください。",
+      "category": "api"
+    },
+    "335": {
+      "code": 335,
+      "severity": "error",
+      "message_en": "Invoice doesn't exist for period.",
+      "message_ja": "指定された期間のインボイスが存在しません。",
+      "solution_ja": "インボイスが存在する期間を指定してください。eBayのインボイスは毎月生成されます。",
+      "category": "account"
+    },
+    "339": {
+      "code": 339,
+      "severity": "error",
+      "message_en": "Specify tax state for sales tax.",
+      "message_ja": "消費税の州を指定してください。",
+      "solution_ja": "消費税を設定する場合は対象の州を指定してください。",
+      "category": "listing"
+    },
+    "340": {
+      "code": 340,
+      "severity": "error",
+      "message_en": "Page number exceeds range.",
+      "message_ja": "ページ番号が範囲を超えています。",
+      "solution_ja": "有効な範囲のページ番号を指定してください。",
+      "category": "api"
+    },
+    "342": {
+      "code": 342,
+      "severity": "error",
+      "message_en": "Select regional/non-regional correctly.",
+      "message_ja": "地域/非地域の設定を正しく選択してください。",
+      "solution_ja": "リージョナル出品の設定を見直してください。",
+      "category": "listing"
+    },
+    "344": {
+      "code": 344,
+      "severity": "warning",
+      "message_en": "Regional listings unsupported.",
+      "message_ja": "地域限定出品はサポートされていません。",
+      "solution_ja": "この警告は無視して問題ありません。地域限定出品機能は多くのサイトで廃止されています。",
+      "category": "listing"
+    },
+    "347": {
+      "code": 347,
+      "severity": "error",
+      "message_en": "BIN price must be whole number.",
+      "message_ja": "即決価格は整数でなければなりません。",
+      "solution_ja": "即決価格を整数値で指定してください（一部のカテゴリ・通貨では小数点以下が使えません）。",
+      "category": "listing"
+    },
+    "349": {
+      "code": 349,
+      "severity": "error",
+      "message_en": "Application data limited to 32 chars.",
+      "message_ja": "アプリケーションデータは32文字以内です。",
+      "solution_ja": "ApplicationDataフィールドの値を32文字以内に収めてください。",
+      "category": "api"
+    },
+    "350": {
+      "code": 350,
+      "severity": "error",
+      "message_en": "End time to >= end time from.",
+      "message_ja": "終了時間（To）は終了時間（From）以上でなければなりません。",
+      "solution_ja": "日付範囲の終了日が開始日以降になるように設定してください。",
+      "category": "api"
+    },
+    "352": {
+      "code": 352,
+      "severity": "error",
+      "message_en": "DetailLevel invalid.",
+      "message_ja": "DetailLevelの値が無効です。",
+      "solution_ja": "有効なDetailLevel値（ReturnAll、ReturnSummary等）を指定してください。",
+      "category": "api"
+    },
+    "353": {
+      "code": 353,
+      "severity": "error",
+      "message_en": "Listing cannot contain javascript/cookies.",
+      "message_ja": "出品にJavaScriptやCookieを含めることはできません。",
+      "solution_ja": "商品説明からJavaScriptコード、Cookieの設定コードを削除してください。eBayではセキュリティ上、これらは禁止されています。",
+      "category": "listing"
+    },
+    "354": {
+      "code": 354,
+      "severity": "error",
+      "message_en": "Choose at least one payment method.",
+      "message_ja": "少なくとも1つの支払い方法を選択してください。",
+      "solution_ja": "出品に支払い方法を設定してください。現在はeBay Managed Paymentsが標準です。",
+      "category": "payment"
+    },
+    "368": {
+      "code": 368,
+      "severity": "error",
+      "message_en": "Feedback temporarily unavailable.",
+      "message_ja": "フィードバック機能が一時的に利用できません。",
+      "solution_ja": "eBayのシステムメンテナンス中の可能性があります。しばらく待ってからリトライしてください。",
+      "category": "feedback"
+    },
+    "371": {
+      "code": 371,
+      "severity": "error",
+      "message_en": "Valid start price required for stores.",
+      "message_ja": "ストア出品には有効な開始価格が必要です。",
+      "solution_ja": "正の数値で有効な開始価格を設定してください。",
+      "category": "listing"
+    },
+    "377": {
+      "code": 377,
+      "severity": "error",
+      "message_en": "Operation failed.",
+      "message_ja": "操作が失敗しました。",
+      "solution_ja": "一般的な失敗エラーです。リクエスト全体を見直し、しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "378": {
+      "code": 378,
+      "severity": "error",
+      "message_en": "Inconsistent checkout tags.",
+      "message_ja": "チェックアウト関連のタグに矛盾があります。",
+      "solution_ja": "チェックアウト設定のタグを見直し、矛盾する指定を解消してください。",
+      "category": "payment"
+    },
+    "379": {
+      "code": 379,
+      "severity": "error",
+      "message_en": "Name value required for address.",
+      "message_ja": "住所に名前が必要です。",
+      "solution_ja": "住所情報に名前（氏名）を入力してください。",
+      "category": "shipping"
+    },
+    "380": {
+      "code": 380,
+      "severity": "error",
+      "message_en": "Name exceeds length limit.",
+      "message_ja": "名前が文字数制限を超えています。",
+      "solution_ja": "名前を短くしてください。",
+      "category": "shipping"
+    },
+    "381": {
+      "code": 381,
+      "severity": "error",
+      "message_en": "Country value required.",
+      "message_ja": "国の値が必要です。",
+      "solution_ja": "住所に国コード（例：US、JP）を指定してください。",
+      "category": "shipping"
+    },
+    "382": {
+      "code": 382,
+      "severity": "error",
+      "message_en": "Valid country name required.",
+      "message_ja": "有効な国名が必要です。",
+      "solution_ja": "正しい国コードを指定してください。eBayで使用できる国コード一覧を確認してください。",
+      "category": "shipping"
+    },
+    "383": {
+      "code": 383,
+      "severity": "error",
+      "message_en": "PostalCode required.",
+      "message_ja": "郵便番号が必要です。",
+      "solution_ja": "郵便番号を入力してください。",
+      "category": "shipping"
+    },
+    "384": {
+      "code": 384,
+      "severity": "error",
+      "message_en": "Valid PostalCode required.",
+      "message_ja": "有効な郵便番号が必要です。",
+      "solution_ja": "正しい形式の郵便番号を入力してください。",
+      "category": "shipping"
+    },
+    "385": {
+      "code": 385,
+      "severity": "error",
+      "message_en": "State value required.",
+      "message_ja": "州の値が必要です。",
+      "solution_ja": "住所に州（State/Province）を入力してください。",
+      "category": "shipping"
+    },
+    "386": {
+      "code": 386,
+      "severity": "error",
+      "message_en": "Valid state required.",
+      "message_ja": "有効な州名が必要です。",
+      "solution_ja": "正しい州名または州コードを入力してください。",
+      "category": "shipping"
+    },
+    "387": {
+      "code": 387,
+      "severity": "error",
+      "message_en": "City value required.",
+      "message_ja": "市区町村の値が必要です。",
+      "solution_ja": "住所に市区町村名を入力してください。",
+      "category": "shipping"
+    },
+    "388": {
+      "code": 388,
+      "severity": "error",
+      "message_en": "Valid city required.",
+      "message_ja": "有効な市区町村名が必要です。",
+      "solution_ja": "正しい市区町村名を入力してください。",
+      "category": "shipping"
+    },
+    "389": {
+      "code": 389,
+      "severity": "error",
+      "message_en": "Address value required.",
+      "message_ja": "住所が必要です。",
+      "solution_ja": "住所（番地等）を入力してください。",
+      "category": "shipping"
+    },
+    "390": {
+      "code": 390,
+      "severity": "error",
+      "message_en": "Valid address required.",
+      "message_ja": "有効な住所が必要です。",
+      "solution_ja": "正しい住所を入力してください。",
+      "category": "shipping"
+    },
+    "391": {
+      "code": 391,
+      "severity": "error",
+      "message_en": "Valid phone number required.",
+      "message_ja": "有効な電話番号が必要です。",
+      "solution_ja": "正しい形式の電話番号を入力してください。国番号を含めてください。",
+      "category": "account"
+    },
+    "396": {
+      "code": 396,
+      "severity": "error",
+      "message_en": "Transaction not found in system.",
+      "message_ja": "取引がシステムに見つかりません。",
+      "solution_ja": "取引ID（TransactionID）が正しいか確認してください。取引が存在するか確認してください。",
+      "category": "payment"
+    },
+    "397": {
+      "code": 397,
+      "severity": "error",
+      "message_en": "Only seller can modify transaction.",
+      "message_ja": "取引を変更できるのはセラーのみです。",
+      "solution_ja": "セラーアカウントでログインしているか確認してください。",
+      "category": "payment"
+    },
+    "398": {
+      "code": 398,
+      "severity": "error",
+      "message_en": "Cannot revise completed checkout.",
+      "message_ja": "完了したチェックアウトは変更できません。",
+      "solution_ja": "チェックアウトが完了した取引の変更はできません。必要に応じてバイヤーに連絡してください。",
+      "category": "payment"
+    },
+    "400": {
+      "code": 400,
+      "severity": "error",
+      "message_en": "Errors in input data.",
+      "message_ja": "入力データにエラーがあります。",
+      "solution_ja": "リクエストの入力データを全体的に見直してください。必須項目が漏れていないか、データ形式が正しいか確認してください。",
+      "category": "api"
+    },
+    "401": {
+      "code": 401,
+      "severity": "error",
+      "message_en": "Required information missing.",
+      "message_ja": "必要な情報が不足しています。",
+      "solution_ja": "リクエストに必須項目がすべて含まれているか確認してください。",
+      "category": "api"
+    },
+    "402": {
+      "code": 402,
+      "severity": "error",
+      "message_en": "Email address too long.",
+      "message_ja": "メールアドレスが長すぎます。",
+      "solution_ja": "より短いメールアドレスを使用してください。",
+      "category": "account"
+    },
+    "403": {
+      "code": 403,
+      "severity": "error",
+      "message_en": "Invalid email address.",
+      "message_ja": "メールアドレスが無効です。",
+      "solution_ja": "正しい形式のメールアドレスを入力してください（例：user@example.com）。",
+      "category": "account"
+    },
+    "404": {
+      "code": 404,
+      "severity": "error",
+      "message_en": "Email cannot exceed _replaceable_value_ characters.",
+      "message_ja": "メールアドレスは_replaceable_value_文字を超えることはできません。",
+      "solution_ja": "メールアドレスを文字数制限内に収めてください。",
+      "category": "account"
+    },
+    "405": {
+      "code": 405,
+      "severity": "error",
+      "message_en": "Email cannot be less than _replaceable_value_ characters.",
+      "message_ja": "メールアドレスは_replaceable_value_文字未満にはできません。",
+      "solution_ja": "有効な長さのメールアドレスを入力してください。",
+      "category": "account"
+    },
+    "406": {
+      "code": 406,
+      "severity": "error",
+      "message_en": "Exceeded 30-day maximum window.",
+      "message_ja": "30日の最大期間を超えています。",
+      "solution_ja": "日付範囲を30日以内に設定してください。",
+      "category": "api"
+    },
+    "407": {
+      "code": 407,
+      "severity": "error",
+      "message_en": "Email cannot contain multiple @.",
+      "message_ja": "メールアドレスに複数の@を含めることはできません。",
+      "solution_ja": "正しい形式のメールアドレスを入力してください。@は1つだけにしてください。",
+      "category": "account"
+    },
+    "408": {
+      "code": 408,
+      "severity": "error",
+      "message_en": "Invalid email address.",
+      "message_ja": "メールアドレスが無効です。",
+      "solution_ja": "正しい形式のメールアドレスを入力してください。",
+      "category": "account"
+    },
+    "409": {
+      "code": 409,
+      "severity": "error",
+      "message_en": "Only _replaceable_value_ input tags allowed.",
+      "message_ja": "セラー検索では「_replaceable_value_」の入力タグのみ使用できます。",
+      "solution_ja": "セラー検索のリクエストに許可されたタグのみを使用してください。",
+      "category": "search"
+    },
+    "410": {
+      "code": 410,
+      "severity": "error",
+      "message_en": "Email cannot begin with number.",
+      "message_ja": "メールアドレスは数字で始めることはできません。",
+      "solution_ja": "メールアドレスの先頭が英字であるか確認してください。",
+      "category": "account"
+    },
+    "411": {
+      "code": 411,
+      "severity": "error",
+      "message_en": "eBay doesn't accept this email.",
+      "message_ja": "eBayはこのメールアドレスを受け付けません。",
+      "solution_ja": "別のメールアドレスを使用してください。一部のメールドメインはeBayでブロックされている場合があります。",
+      "category": "account"
+    },
+    "412": {
+      "code": 412,
+      "severity": "error",
+      "message_en": "Email cannot contain _replaceable_value_.",
+      "message_ja": "メールアドレスに「_replaceable_value_」を含めることはできません。",
+      "solution_ja": "メールアドレスから無効な文字を削除してください。",
+      "category": "account"
+    },
+    "413": {
+      "code": 413,
+      "severity": "error",
+      "message_en": "Cannot specify checkout for category.",
+      "message_ja": "このカテゴリではチェックアウトを指定できません。",
+      "solution_ja": "このカテゴリではチェックアウト設定が不要です。チェックアウト関連のタグを削除してください。",
+      "category": "payment"
+    },
+    "417": {
+      "code": 417,
+      "severity": "error",
+      "message_en": "Currency invalid, use Euro.",
+      "message_ja": "通貨が無効です。ユーロを使用してください。",
+      "solution_ja": "このサイトではユーロ（EUR）を通貨として指定してください。",
+      "category": "listing"
+    },
+    "418": {
+      "code": 418,
+      "severity": "error",
+      "message_en": "Tax state required.",
+      "message_ja": "税金の州が必要です。",
+      "solution_ja": "消費税を設定する場合は対象の州を指定してください。",
+      "category": "listing"
+    },
+    "419": {
+      "code": 419,
+      "severity": "error",
+      "message_en": "Tax must be number > 0.",
+      "message_ja": "税率は0より大きい数値でなければなりません。",
+      "solution_ja": "正の数値で税率を指定してください。",
+      "category": "listing"
+    },
+    "420": {
+      "code": 420,
+      "severity": "error",
+      "message_en": "Ad-format only in supported categories.",
+      "message_ja": "広告形式はサポートされたカテゴリでのみ使用できます。",
+      "solution_ja": "広告形式（Ad Format）に対応したカテゴリを選択してください。不動産等の特定カテゴリのみで利用可能です。",
+      "category": "listing"
+    },
+    "421": {
+      "code": 421,
+      "severity": "error",
+      "message_en": "Must be 0 or 1.",
+      "message_ja": "CheckoutDetailsSpecifiedは0または1でなければなりません。",
+      "solution_ja": "CheckoutDetailsSpecifiedに0（無効）または1（有効）を指定してください。",
+      "category": "payment"
+    },
+    "422": {
+      "code": 422,
+      "severity": "error",
+      "message_en": "Specify store name for search.",
+      "message_ja": "ストア検索にはストア名を指定してください。",
+      "solution_ja": "検索リクエストにストア名を含めてください。",
+      "category": "search"
+    },
+    "423": {
+      "code": 423,
+      "severity": "error",
+      "message_en": "Cannot search by store name across stores.",
+      "message_ja": "ストア名でストア横断検索はできません。",
+      "solution_ja": "特定のストア内での検索に限定してください。",
+      "category": "search"
+    },
+    "424": {
+      "code": 424,
+      "severity": "error",
+      "message_en": "Cannot use these filters for store search.",
+      "message_ja": "これらのフィルターはストア検索では使用できません。",
+      "solution_ja": "ストア検索で使用できるフィルターに変更してください。",
+      "category": "search"
+    },
+    "426": {
+      "code": 426,
+      "severity": "error",
+      "message_en": "Email cannot contain consecutive periods.",
+      "message_ja": "メールアドレスに連続するピリオド（..）を含めることはできません。",
+      "solution_ja": "メールアドレスの形式を修正してください。",
+      "category": "account"
+    },
+    "429": {
+      "code": 429,
+      "severity": "error",
+      "message_en": "Email cannot contain _replaceable_value_.",
+      "message_ja": "メールアドレスに「_replaceable_value_」を含めることはできません。",
+      "solution_ja": "メールアドレスから無効な文字を削除してください。",
+      "category": "account"
+    },
+    "434": {
+      "code": 434,
+      "severity": "error",
+      "message_en": "Cannot search descriptions across eBay.",
+      "message_ja": "eBay全体の商品説明を横断検索することはできません。",
+      "solution_ja": "商品説明の検索は特定のカテゴリやストア内に限定してください。",
+      "category": "search"
+    },
+    "438": {
+      "code": 438,
+      "severity": "error",
+      "message_en": "Cannot edit/relist Second Chance Offers.",
+      "message_ja": "セカンドチャンスオファーの編集/再出品はできません。",
+      "solution_ja": "セカンドチャンスオファーは編集できません。必要に応じて新規出品を作成してください。",
+      "category": "listing"
+    },
+    "440": {
+      "code": 440,
+      "severity": "error",
+      "message_en": "U.S. shipping required if specified.",
+      "message_ja": "米国内配送の指定が必要です。",
+      "solution_ja": "米国内配送の設定を追加してください。",
+      "category": "shipping"
+    },
+    "444": {
+      "code": 444,
+      "severity": "error",
+      "message_en": "SiteIdFilterType invalid value.",
+      "message_ja": "SiteIdFilterTypeの値が無効です。",
+      "solution_ja": "有効なSiteIdFilterType値を指定してください。",
+      "category": "search"
+    },
+    "447": {
+      "code": 447,
+      "severity": "error",
+      "message_en": "SearchVersion/Category combination invalid.",
+      "message_ja": "SearchVersionとCategoryの組み合わせが無効です。",
+      "solution_ja": "検索バージョンとカテゴリの組み合わせを見直してください。",
+      "category": "search"
+    },
+    "449": {
+      "code": 449,
+      "severity": "error",
+      "message_en": "Shipping/tax tags not allowed for Motors.",
+      "message_ja": "Motors（自動車）カテゴリでは配送/税金タグは使用できません。",
+      "solution_ja": "自動車カテゴリの出品から配送と税金のタグを削除してください。",
+      "category": "listing"
+    },
+    "468": {
+      "code": 468,
+      "severity": "error",
+      "message_en": "Pagination required at detail level.",
+      "message_ja": "この詳細レベルではページネーションが必要です。",
+      "solution_ja": "リクエストにPagination（EntriesPerPage、PageNumber）を追加してください。",
+      "category": "api"
+    },
+    "469": {
+      "code": 469,
+      "severity": "error",
+      "message_en": "Multi-item requires higher start price.",
+      "message_ja": "複数数量出品にはより高い開始価格が必要です。",
+      "solution_ja": "複数数量出品の開始価格を引き上げてください。",
+      "category": "listing"
+    },
+    "470": {
+      "code": 470,
+      "severity": "error",
+      "message_en": "Item lacks/has invalid attributes.",
+      "message_ja": "アイテムの属性（Item Specifics）が不足または無効です。",
+      "solution_ja": "カテゴリに必要なItem Specificsを正しく設定してください。GetCategorySpecificsで必須項目を確認できます。",
+      "category": "listing"
+    },
+    "473": {
+      "code": 473,
+      "severity": "error",
+      "message_en": "WatchSort value invalid.",
+      "message_ja": "WatchSortの値が無効です。",
+      "solution_ja": "有効なWatchSort値を指定してください。",
+      "category": "api"
+    },
+    "474": {
+      "code": 474,
+      "severity": "error",
+      "message_en": "User not found in database.",
+      "message_ja": "ユーザーがデータベースに見つかりません。",
+      "solution_ja": "ユーザーIDが正しいか確認してください。",
+      "category": "account"
+    },
+    "475": {
+      "code": 475,
+      "severity": "error",
+      "message_en": "Domain not mapped to category.",
+      "message_ja": "ドメインがカテゴリにマッピングされていません。",
+      "solution_ja": "正しいカテゴリIDを指定してください。",
+      "category": "listing"
+    },
+    "477": {
+      "code": 477,
+      "severity": "error",
+      "message_en": "Not qualified or unavailable.",
+      "message_ja": "ストアの利用資格がない、または利用できません。",
+      "solution_ja": "eBayストアの利用条件を確認してください。ストア登録が必要な場合があります。",
+      "category": "account"
+    },
+    "487": {
+      "code": 487,
+      "severity": "error",
+      "message_en": "UUID invalid length/content.",
+      "message_ja": "UUIDの長さまたは内容が無効です。",
+      "solution_ja": "正しい形式のUUID（32文字の英数字）を指定してください。重複チェック用のUUIDはリクエストごとにユニークにしてください。",
+      "category": "api"
+    },
+    "488": {
+      "code": 488,
+      "severity": "error",
+      "message_en": "UUID already used.",
+      "message_ja": "このUUIDはすでに使用されています。",
+      "solution_ja": "新しいUUIDを生成してリクエストに使用してください。UUIDはリクエストごとにユニークである必要があります。",
+      "category": "api"
+    },
+    "489": {
+      "code": 489,
+      "severity": "error",
+      "message_en": "Cannot change category.",
+      "message_ja": "カテゴリを変更できません。",
+      "solution_ja": "出品後のカテゴリ変更には制限があります。入札がある場合はカテゴリ変更できません。出品を終了して新規出品してください。",
+      "category": "listing"
+    },
+    "498": {
+      "code": 498,
+      "severity": "error",
+      "message_en": "Need credit card for scheduling.",
+      "message_ja": "出品予約にはクレジットカードの登録が必要です。",
+      "solution_ja": "eBayアカウントにクレジットカードを登録してから出品予約を設定してください。",
+      "category": "listing"
+    },
+    "499": {
+      "code": 499,
+      "severity": "error",
+      "message_en": "Cannot schedule more items.",
+      "message_ja": "これ以上の出品予約はできません。",
+      "solution_ja": "予約出品数の上限に達しています。既存の予約出品を減らしてから再度お試しください。",
+      "category": "listing"
+    },
+    "500": {
+      "code": 500,
+      "severity": "error",
+      "message_en": "Scheduled time in past.",
+      "message_ja": "予約時間が過去の日時です。",
+      "solution_ja": "未来の日時を予約開始時間として設定してください。",
+      "category": "listing"
+    },
+    "501": {
+      "code": 501,
+      "severity": "error",
+      "message_en": "Start time below minimum.",
+      "message_ja": "開始時間が最小値を下回っています。",
+      "solution_ja": "出品予約は少なくとも数時間後以降に設定してください。",
+      "category": "listing"
+    },
+    "502": {
+      "code": 502,
+      "severity": "error",
+      "message_en": "Scheduled start time too far.",
+      "message_ja": "予約開始時間が遠すぎます。",
+      "solution_ja": "出品予約は通常3週間以内に設定してください。",
+      "category": "listing"
+    },
+    "503": {
+      "code": 503,
+      "severity": "error",
+      "message_en": "Cannot modify listing within 1 hour.",
+      "message_ja": "開始1時間以内の出品は変更できません。",
+      "solution_ja": "予約出品は開始1時間前まで変更可能です。それ以降は変更できません。",
+      "category": "listing"
+    },
+    "504": {
+      "code": 504,
+      "severity": "warning",
+      "message_en": "Cannot access seller address.",
+      "message_ja": "セラーの住所情報にアクセスできません。",
+      "solution_ja": "この警告は通常無視して問題ありません。セラーが住所を非公開にしている可能性があります。",
+      "category": "account"
+    },
+    "505": {
+      "code": 505,
+      "severity": "error",
+      "message_en": "Must accept CIP+ and provide bank info.",
+      "message_ja": "CIP+を受け入れ、銀行情報を提供する必要があります。",
+      "solution_ja": "eBayの支払い条件（CIP+）に同意し、銀行口座情報を登録してください。",
+      "category": "payment"
+    },
+    "506": {
+      "code": 506,
+      "severity": "error",
+      "message_en": "Provide bank details for transfers.",
+      "message_ja": "銀行振込用の口座情報を提供してください。",
+      "solution_ja": "銀行口座情報（口座番号、銀行コード等）を登録してください。",
+      "category": "payment"
+    },
+    "507": {
+      "code": 507,
+      "severity": "error",
+      "message_en": "Scheduling not supported.",
+      "message_ja": "出品予約はサポートされていません。",
+      "solution_ja": "このサイトまたはカテゴリでは出品予約が使用できません。即時出品してください。",
+      "category": "listing"
+    },
+    "508": {
+      "code": 508,
+      "severity": "warning",
+      "message_en": "Cannot access registration address.",
+      "message_ja": "登録住所にアクセスできません。",
+      "solution_ja": "この警告は通常無視して問題ありません。",
+      "category": "account"
+    },
+    "511": {
+      "code": 511,
+      "severity": "error",
+      "message_en": "BIN price negative or bad format.",
+      "message_ja": "即決価格がマイナスまたは不正な形式です。",
+      "solution_ja": "正の数値で正しい形式の即決価格を指定してください。",
+      "category": "listing"
+    },
+    "512": {
+      "code": 512,
+      "severity": "error",
+      "message_en": "Start price invalid/bad format.",
+      "message_ja": "開始価格が無効または不正な形式です。",
+      "solution_ja": "正の数値で正しい形式の開始価格を指定してください。",
+      "category": "listing"
+    },
+    "513": {
+      "code": 513,
+      "severity": "error",
+      "message_en": "Reserve price invalid/bad format.",
+      "message_ja": "リザーブプライスが無効または不正な形式です。",
+      "solution_ja": "正の数値で正しい形式のリザーブプライスを指定してください。",
+      "category": "listing"
+    },
+    "514": {
+      "code": 514,
+      "severity": "error",
+      "message_en": "Cannot select both shipping options.",
+      "message_ja": "両方の配送オプションを同時に選択できません。",
+      "solution_ja": "配送方法を1つ選択してください。矛盾する配送設定を解消してください。",
+      "category": "shipping"
+    },
+    "515": {
+      "code": 515,
+      "severity": "error",
+      "message_en": "Quantity must be valid number > 0.",
+      "message_ja": "数量は0より大きい有効な数値でなければなりません。",
+      "solution_ja": "1以上の整数で数量を指定してください。",
+      "category": "listing"
+    },
+    "516": {
+      "code": 516,
+      "severity": "error",
+      "message_en": "Must relist in Event Tickets category.",
+      "message_ja": "イベントチケットカテゴリで再出品する必要があります。",
+      "solution_ja": "チケット商品はEvent Ticketsカテゴリで再出品してください。",
+      "category": "listing"
+    },
+    "517": {
+      "code": 517,
+      "severity": "error",
+      "message_en": "Application not authorized for call.",
+      "message_ja": "アプリケーションはこのAPIコールの権限がありません。",
+      "solution_ja": "eBay Developer Portalでアプリケーションの権限設定を確認してください。必要なAPIスコープが付与されているか確認してください。",
+      "category": "auth"
+    },
+    "518": {
+      "code": 518,
+      "severity": "error",
+      "message_en": "Exceeded call usage limit.",
+      "message_ja": "APIコールの使用制限を超えました。",
+      "solution_ja": "APIコール数の上限に達しています。しばらく待ってからリトライするか、eBayにAPI利用制限の引き上げを申請してください。",
+      "category": "api"
+    },
+    "519": {
+      "code": 519,
+      "severity": "error",
+      "message_en": "Pool name incorrect.",
+      "message_ja": "プール名が正しくありません。",
+      "solution_ja": "正しいプール名を指定してください。",
+      "category": "api"
+    },
+    "520": {
+      "code": 520,
+      "severity": "error",
+      "message_en": "Compatibility level too low.",
+      "message_ja": "互換性レベルが低すぎます。",
+      "solution_ja": "CompatibilityLevelの値を最新バージョンに更新してください。",
+      "category": "api"
+    },
+    "521": {
+      "code": 521,
+      "severity": "error",
+      "message_en": "Time window invalid.",
+      "message_ja": "時間ウィンドウが無効です。",
+      "solution_ja": "有効な時間範囲を指定してください。",
+      "category": "api"
+    },
+    "522": {
+      "code": 522,
+      "severity": "error",
+      "message_en": "Time window not specified.",
+      "message_ja": "時間ウィンドウが指定されていません。",
+      "solution_ja": "時間範囲（ModTimeFrom/ModTimeTo等）を指定してください。",
+      "category": "api"
+    },
+    "523": {
+      "code": 523,
+      "severity": "error",
+      "message_en": "Error language ID invalid.",
+      "message_ja": "エラー言語IDが無効です。",
+      "solution_ja": "有効なErrorLanguage値を指定してください。",
+      "category": "api"
+    },
+    "560": {
+      "code": 560,
+      "severity": "error",
+      "message_en": "MeasurementUnit unsupported.",
+      "message_ja": "重量単位がサポートされていません。",
+      "solution_ja": "サポートされている重量単位（lb/oz/kg/g）を使用してください。",
+      "category": "shipping"
+    },
+    "580": {
+      "code": 580,
+      "severity": "error",
+      "message_en": "Only ad-format for lead info.",
+      "message_ja": "リード情報は広告形式の出品のみです。",
+      "solution_ja": "GetAdFormatLeadsは広告形式の出品にのみ使用できます。",
+      "category": "listing"
+    },
+    "584": {
+      "code": 584,
+      "severity": "error",
+      "message_en": "eBay user not authorized.",
+      "message_ja": "eBayユーザーに権限がありません。",
+      "solution_ja": "このリクエストに必要な権限があるか確認してください。認証トークンを再発行する必要があるかもしれません。",
+      "category": "auth"
+    },
+    "585": {
+      "code": 585,
+      "severity": "error",
+      "message_en": "Multi-item requires higher price.",
+      "message_ja": "複数数量出品にはより高い価格が必要です。",
+      "solution_ja": "複数数量出品の価格を引き上げてください。",
+      "category": "listing"
+    },
+    "586": {
+      "code": 586,
+      "severity": "error",
+      "message_en": "User doesn't meet requirements.",
+      "message_ja": "ダッチオークションの利用要件を満たしていません。",
+      "solution_ja": "ダッチオークションの利用にはフィードバック数と会員期間の条件があります。条件を満たしてからお試しください。",
+      "category": "listing"
+    },
+    "587": {
+      "code": 587,
+      "severity": "error",
+      "message_en": "Accept CIP and provide bank info.",
+      "message_ja": "CIPに同意し、銀行情報を提供してください。",
+      "solution_ja": "支払い条件（CIP）に同意し、銀行口座情報を設定してください。",
+      "category": "payment"
+    },
+    "588": {
+      "code": 588,
+      "severity": "error",
+      "message_en": "Selling limits exceeded or not registered.",
+      "message_ja": "出品制限を超えた、または未登録のセラーです。",
+      "solution_ja": "出品リミットに達しています。eBayに出品リミットの引き上げをリクエストしてください。Seller Hubの「Selling limits」から申請できます。",
+      "category": "account"
+    },
+    "589": {
+      "code": 589,
+      "severity": "error",
+      "message_en": "Buying activity limits exceeded.",
+      "message_ja": "購入活動の制限を超えました。",
+      "solution_ja": "購入制限に達しています。しばらく待ってから再度お試しください。",
+      "category": "account"
+    },
+    "590": {
+      "code": 590,
+      "severity": "error",
+      "message_en": "Insurance should be 0.00 when option 3.",
+      "message_ja": "保険オプション3の場合、保険金額は0.00にする必要があります。",
+      "solution_ja": "保険オプションが3（該当なし）の場合、保険金額を0に設定してください。",
+      "category": "shipping"
+    },
+    "591": {
+      "code": 591,
+      "severity": "error",
+      "message_en": "BIN > start and reserve price.",
+      "message_ja": "即決価格は開始価格とリザーブプライスより高くなければなりません。",
+      "solution_ja": "Buy It Now価格を開始価格とリザーブプライスの両方を上回る金額に設定してください。",
+      "category": "listing"
+    },
+    "592": {
+      "code": 592,
+      "severity": "error",
+      "message_en": "Use Buy It Now instead.",
+      "message_ja": "入札の代わりにBuy It Now（即決）を使用してください。",
+      "solution_ja": "この出品は即決購入のみ対応しています。Buy It Nowで購入してください。",
+      "category": "listing"
+    },
+    "593": {
+      "code": 593,
+      "severity": "error",
+      "message_en": "Enter price lower than _replaceable_value_.",
+      "message_ja": "「_replaceable_value_」より低い価格を入力してください。",
+      "solution_ja": "入札金額を指定された上限以下に設定してください。",
+      "category": "listing"
+    },
+    "594": {
+      "code": 594,
+      "severity": "error",
+      "message_en": "Next bid would exceed BIN.",
+      "message_ja": "次の入札額が即決価格を超えてしまいます。",
+      "solution_ja": "Buy It Now機能を使って購入するか、即決価格以下で入札してください。",
+      "category": "listing"
+    },
+    "602": {
+      "code": 602,
+      "severity": "error",
+      "message_en": "Theme ID not provided.",
+      "message_ja": "テーマIDが指定されていません。",
+      "solution_ja": "出品テンプレートのテーマIDを指定してください。",
+      "category": "listing"
+    },
+    "603": {
+      "code": 603,
+      "severity": "error",
+      "message_en": "Theme ID invalid.",
+      "message_ja": "テーマIDが無効です。",
+      "solution_ja": "有効なテーマIDを指定してください。GetDescriptionTemplatesで利用可能なテーマを確認できます。",
+      "category": "listing"
+    },
+    "604": {
+      "code": 604,
+      "severity": "error",
+      "message_en": "Theme ID obsolete.",
+      "message_ja": "テーマIDが廃止されています。",
+      "solution_ja": "新しいテーマIDを使用してください。GetDescriptionTemplatesで最新のテーマ一覧を取得してください。",
+      "category": "listing"
+    },
+    "605": {
+      "code": 605,
+      "severity": "error",
+      "message_en": "Layout ID not provided.",
+      "message_ja": "レイアウトIDが指定されていません。",
+      "solution_ja": "出品テンプレートのレイアウトIDを指定してください。",
+      "category": "listing"
+    },
+    "606": {
+      "code": 606,
+      "severity": "error",
+      "message_en": "Layout ID invalid.",
+      "message_ja": "レイアウトIDが無効です。",
+      "solution_ja": "有効なレイアウトIDを指定してください。",
+      "category": "listing"
+    },
+    "607": {
+      "code": 607,
+      "severity": "error",
+      "message_en": "Layout ID obsolete.",
+      "message_ja": "レイアウトIDが廃止されています。",
+      "solution_ja": "新しいレイアウトIDを使用してください。",
+      "category": "listing"
+    },
+    "640": {
+      "code": 640,
+      "severity": "error",
+      "message_en": "_replaceable_value_",
+      "message_ja": "動的エラーメッセージ（内容は状況により異なります）。",
+      "solution_ja": "エラーメッセージの内容を確認し、具体的な問題に対処してください。",
+      "category": "other"
+    },
+    "701": {
+      "code": 701,
+      "severity": "error",
+      "message_en": "Transaction code not in database.",
+      "message_ja": "トランザクションコードがデータベースにありません。",
+      "solution_ja": "トランザクションコードが正しいか確認してください。",
+      "category": "payment"
+    },
+    "702": {
+      "code": 702,
+      "severity": "error",
+      "message_en": "Transaction code validation period passed.",
+      "message_ja": "トランザクションコードの有効期限が過ぎています。",
+      "solution_ja": "新しいトランザクションコードを取得してください。",
+      "category": "payment"
+    },
+    "703": {
+      "code": 703,
+      "severity": "error",
+      "message_en": "Cannot store response.",
+      "message_ja": "レスポンスを保存できません。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "704": {
+      "code": 704,
+      "severity": "error",
+      "message_en": "Cannot store response note.",
+      "message_ja": "レスポンスメモを保存できません。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "705": {
+      "code": 705,
+      "severity": "error",
+      "message_en": "Cannot update transaction.",
+      "message_ja": "トランザクションを更新できません。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。",
+      "category": "payment"
+    },
+    "707": {
+      "code": 707,
+      "severity": "error",
+      "message_en": "Actual rate shipping USA/Motors only.",
+      "message_ja": "実費配送はUSAサイト/自動車カテゴリのみです。",
+      "solution_ja": "実費配送（Calculated Shipping）はUSサイトまたはMotorsカテゴリでのみ利用可能です。他のサイトでは定額配送を使用してください。",
+      "category": "shipping"
+    },
+    "708": {
+      "code": 708,
+      "severity": "error",
+      "message_en": "Sothebys parameters missing.",
+      "message_ja": "Sotheby'sのパラメータが不足しています。",
+      "solution_ja": "Sotheby's出品に必要な全パラメータを設定してください。",
+      "category": "listing"
+    },
+    "709": {
+      "code": 709,
+      "severity": "warning",
+      "message_en": "Cannot access other bidder lists.",
+      "message_ja": "他のユーザーの入札者リストにアクセスできません。",
+      "solution_ja": "入札者リストは出品者本人のみ閲覧できます。",
+      "category": "listing"
+    },
+    "710": {
+      "code": 710,
+      "severity": "error",
+      "message_en": "Estimate required for Sothebys.",
+      "message_ja": "Sotheby's出品には見積もりが必要です。",
+      "solution_ja": "Sotheby's出品に見積もり金額を設定してください。",
+      "category": "listing"
+    },
+    "712": {
+      "code": 712,
+      "severity": "error",
+      "message_en": "Packages over 150 pounds unavailable.",
+      "message_ja": "150ポンドを超える荷物は対応できません。",
+      "solution_ja": "150ポンド（約68kg）以下に荷物の重量を設定してください。重い場合は貨物配送を検討してください。",
+      "category": "shipping"
+    },
+    "713": {
+      "code": 713,
+      "severity": "error",
+      "message_en": "Insurance in S&H invalid.",
+      "message_ja": "送料・手数料内の保険設定が無効です。",
+      "solution_ja": "保険の設定を見直してください。",
+      "category": "shipping"
+    },
+    "714": {
+      "code": 714,
+      "severity": "error",
+      "message_en": "WeightMajor invalid.",
+      "message_ja": "WeightMajor（主要重量）が無効です。",
+      "solution_ja": "WeightMajor（ポンド/キログラム）に正の数値を設定してください。",
+      "category": "shipping"
+    },
+    "715": {
+      "code": 715,
+      "severity": "error",
+      "message_en": "WeightMinor value invalid.",
+      "message_ja": "WeightMinor（小数重量）の値が無効です。",
+      "solution_ja": "WeightMinor（オンス/グラム）に有効な数値を設定してください。",
+      "category": "shipping"
+    },
+    "716": {
+      "code": 716,
+      "severity": "error",
+      "message_en": "First class max 13 ounces.",
+      "message_ja": "ファーストクラスメールは最大13オンスまでです。",
+      "solution_ja": "13オンス（約370g）以下の商品のみFirst Class Mailが利用可能です。重い場合はPriority Mail等を選択してください。",
+      "category": "shipping"
+    },
+    "717": {
+      "code": 717,
+      "severity": "error",
+      "message_en": "Package weight invalid/missing.",
+      "message_ja": "荷物の重量が無効または未入力です。",
+      "solution_ja": "正確な荷物の重量を入力してください。計算配送を使用する場合は必須です。",
+      "category": "shipping"
+    },
+    "718": {
+      "code": 718,
+      "severity": "error",
+      "message_en": "PackagingHandlingCosts invalid.",
+      "message_ja": "梱包・取り扱い費用が無効です。",
+      "solution_ja": "梱包手数料（Handling Cost）に正の数値を設定してください。",
+      "category": "shipping"
+    },
+    "719": {
+      "code": 719,
+      "severity": "error",
+      "message_en": "PostalCode must be 5 or 9 digits.",
+      "message_ja": "郵便番号は5桁または9桁でなければなりません。",
+      "solution_ja": "米国の郵便番号は5桁（例：90210）または9桁（例：90210-1234）で入力してください。",
+      "category": "shipping"
+    },
+    "720": {
+      "code": 720,
+      "severity": "error",
+      "message_en": "Destination/PostalCode invalid.",
+      "message_ja": "配送先の郵便番号が無効です。",
+      "solution_ja": "有効な配送先郵便番号を入力してください。",
+      "category": "shipping"
+    },
+    "721": {
+      "code": 721,
+      "severity": "error",
+      "message_en": "ShippingService missing/invalid.",
+      "message_ja": "配送サービスが未指定または無効です。",
+      "solution_ja": "有効な配送サービス（例：USPSPriority、FedExGround等）を指定してください。",
+      "category": "shipping"
+    },
+    "722": {
+      "code": 722,
+      "severity": "error",
+      "message_en": "Large packages can't use express.",
+      "message_ja": "大型荷物ではエクスプレス配送を使用できません。",
+      "solution_ja": "大型荷物には別の配送方法（Ground等）を選択してください。",
+      "category": "shipping"
+    },
+    "723": {
+      "code": 723,
+      "severity": "error",
+      "message_en": "Oversize packages can't use methods.",
+      "message_ja": "超大型荷物では一部の配送方法が使用できません。",
+      "solution_ja": "超大型荷物に対応した配送方法を選択してください。",
+      "category": "shipping"
+    },
+    "724": {
+      "code": 724,
+      "severity": "error",
+      "message_en": "Weight value must be numeric.",
+      "message_ja": "重量の値は数値でなければなりません。",
+      "solution_ja": "重量に数値のみを入力してください。",
+      "category": "shipping"
+    },
+    "725": {
+      "code": 725,
+      "severity": "error",
+      "message_en": "Cannot calculate shipping now.",
+      "message_ja": "現在、送料を計算できません。",
+      "solution_ja": "eBayの送料計算サービスが一時的に利用できません。しばらく待ってからリトライしてください。",
+      "category": "shipping"
+    },
+    "726": {
+      "code": 726,
+      "severity": "error",
+      "message_en": "Shipping/tax amount inconsistent.",
+      "message_ja": "送料と税金の金額が一致しません。",
+      "solution_ja": "送料と税金の設定を見直して整合性を確保してください。",
+      "category": "shipping"
+    },
+    "727": {
+      "code": 727,
+      "severity": "error",
+      "message_en": "Reserve not allowed for real estate.",
+      "message_ja": "不動産カテゴリではリザーブプライスが使用できません。",
+      "solution_ja": "不動産出品からリザーブプライスを削除してください。",
+      "category": "listing"
+    },
+    "729": {
+      "code": 729,
+      "severity": "error",
+      "message_en": "Quantity invalid for item.",
+      "message_ja": "このアイテムでは数量が無効です。",
+      "solution_ja": "このカテゴリまたは出品形式で許可される数量を確認してください。",
+      "category": "listing"
+    },
+    "731": {
+      "code": 731,
+      "severity": "error",
+      "message_en": "PayPal email format invalid.",
+      "message_ja": "PayPalメールアドレスの形式が無効です。",
+      "solution_ja": "正しい形式のPayPalメールアドレスを入力してください。",
+      "category": "payment"
+    },
+    "732": {
+      "code": 732,
+      "severity": "error",
+      "message_en": "Valid PayPal email required.",
+      "message_ja": "有効なPayPalメールアドレスが必要です。",
+      "solution_ja": "PayPalアカウントに登録されているメールアドレスを正確に入力してください。",
+      "category": "payment"
+    },
+    "734": {
+      "code": 734,
+      "severity": "error",
+      "message_en": "Flat envelopes can't use priority.",
+      "message_ja": "フラット封筒ではUSPS Priority Mailを使用できません。",
+      "solution_ja": "荷物の種類を変更するか、別の配送方法を選択してください。",
+      "category": "shipping"
+    },
+    "735": {
+      "code": 735,
+      "severity": "error",
+      "message_en": "Large packages can't use express.",
+      "message_ja": "大型荷物ではExpress Mailを使用できません。",
+      "solution_ja": "大型荷物には別の配送方法を選択してください。",
+      "category": "shipping"
+    },
+    "736": {
+      "code": 736,
+      "severity": "error",
+      "message_en": "Flat envelopes can't use parcel.",
+      "message_ja": "フラット封筒ではParcel Postを使用できません。",
+      "solution_ja": "荷物の種類を変更するか、別の配送方法を選択してください。",
+      "category": "shipping"
+    },
+    "737": {
+      "code": 737,
+      "severity": "error",
+      "message_en": "Postal code invalid.",
+      "message_ja": "郵便番号が無効です。",
+      "solution_ja": "正しい形式の郵便番号を入力してください。",
+      "category": "shipping"
+    },
+    "739": {
+      "code": 739,
+      "severity": "error",
+      "message_en": "Shipping package type required.",
+      "message_ja": "配送パッケージの種類が必要です。",
+      "solution_ja": "パッケージの種類（PackageType: Letter、LargeEnvelope、Package等）を指定してください。",
+      "category": "shipping"
+    },
+    "740": {
+      "code": 740,
+      "severity": "error",
+      "message_en": "Weight must be 0-70 pounds.",
+      "message_ja": "重量は0〜70ポンドの範囲でなければなりません。",
+      "solution_ja": "重量を70ポンド（約32kg）以内に設定してください。",
+      "category": "shipping"
+    },
+    "741": {
+      "code": 741,
+      "severity": "error",
+      "message_en": "Flat rate envelopes for priority.",
+      "message_ja": "フラットレート封筒はPriority Mail専用です。",
+      "solution_ja": "フラットレート封筒を使用する場合はUSPS Priority Mailを選択してください。",
+      "category": "shipping"
+    },
+    "742": {
+      "code": 742,
+      "severity": "error",
+      "message_en": "Unsupported service for oversize.",
+      "message_ja": "超大型荷物ではこの配送サービスがサポートされていません。",
+      "solution_ja": "超大型荷物に対応した配送サービスを選択してください。",
+      "category": "shipping"
+    },
+    "743": {
+      "code": 743,
+      "severity": "error",
+      "message_en": "Letters can't use parcel post.",
+      "message_ja": "レターではParcel Postを使用できません。",
+      "solution_ja": "荷物の種類を変更するか、Letter対応の配送方法を選択してください。",
+      "category": "shipping"
+    },
+    "744": {
+      "code": 744,
+      "severity": "error",
+      "message_en": "Letters can't use media mail.",
+      "message_ja": "レターではMedia Mailを使用できません。",
+      "solution_ja": "荷物の種類を変更するか、別の配送方法を選択してください。",
+      "category": "shipping"
+    },
+    "745": {
+      "code": 745,
+      "severity": "error",
+      "message_en": "Large envelopes can't use media.",
+      "message_ja": "大型封筒ではMedia Mailを使用できません。",
+      "solution_ja": "荷物の種類を変更するか、別の配送方法を選択してください。",
+      "category": "shipping"
+    },
+    "746": {
+      "code": 746,
+      "severity": "error",
+      "message_en": "Actual rate shipping unavailable.",
+      "message_ja": "実費配送が利用できません。",
+      "solution_ja": "定額配送（Flat Rate）を使用してください。",
+      "category": "shipping"
+    },
+    "749": {
+      "code": 749,
+      "severity": "error",
+      "message_en": "Select gift icon first.",
+      "message_ja": "先にギフトアイコンを選択してください。",
+      "solution_ja": "ギフト関連オプションを使用する場合は、まずギフトアイコンを選択してください。",
+      "category": "listing"
+    },
+    "770": {
+      "code": 770,
+      "severity": "error",
+      "message_en": "Requested service marked down.",
+      "message_ja": "リクエストされたサービスは停止中です。",
+      "solution_ja": "このサービスは現在メンテナンス中です。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "772": {
+      "code": 772,
+      "severity": "error",
+      "message_en": "Cannot schedule, card expired.",
+      "message_ja": "クレジットカードの有効期限切れのため出品予約できません。",
+      "solution_ja": "eBayアカウントに有効なクレジットカードを登録してください。",
+      "category": "account"
+    },
+    "773": {
+      "code": 773,
+      "severity": "error",
+      "message_en": "Need card or Direct Pay agreement.",
+      "message_ja": "クレジットカードまたはDirect Pay契約が必要です。",
+      "solution_ja": "eBayアカウントにクレジットカードを登録するか、Direct Pay契約を設定してください。",
+      "category": "account"
+    },
+    "774": {
+      "code": 774,
+      "severity": "error",
+      "message_en": "Adult category invalid for featured.",
+      "message_ja": "アダルトカテゴリではフィーチャー出品が無効です。",
+      "solution_ja": "アダルトカテゴリの出品からフィーチャーオプションを削除してください。",
+      "category": "listing"
+    },
+    "775": {
+      "code": 775,
+      "severity": "error",
+      "message_en": "Adult category invalid for BIN.",
+      "message_ja": "アダルトカテゴリではBuy It Nowが無効です。",
+      "solution_ja": "アダルトカテゴリの出品から即決価格を削除してください。",
+      "category": "listing"
+    },
+    "777": {
+      "code": 777,
+      "severity": "error",
+      "message_en": "Account level invalid/missing.",
+      "message_ja": "アカウントレベルが無効または不足しています。",
+      "solution_ja": "アカウント設定を確認してください。",
+      "category": "account"
+    },
+    "778": {
+      "code": 778,
+      "severity": "error",
+      "message_en": "Account type invalid/missing.",
+      "message_ja": "アカウントタイプが無効または不足しています。",
+      "solution_ja": "アカウント設定を確認してください。",
+      "category": "account"
+    },
+    "779": {
+      "code": 779,
+      "severity": "error",
+      "message_en": "Not qualified for immediate payment.",
+      "message_ja": "即時支払い機能の利用資格がありません。",
+      "solution_ja": "即時支払いを利用するにはPayPalのPremierまたはBusinessアカウントが必要です。",
+      "category": "payment"
+    },
+    "780": {
+      "code": 780,
+      "severity": "error",
+      "message_en": "EncryptedID invalid/missing.",
+      "message_ja": "EncryptedIDが無効または不足しています。",
+      "solution_ja": "正しいEncryptedIDを指定してください。",
+      "category": "auth"
+    },
+    "781": {
+      "code": 781,
+      "severity": "error",
+      "message_en": "Email address too long.",
+      "message_ja": "メールアドレスが長すぎます。",
+      "solution_ja": "より短いメールアドレスを使用してください。",
+      "category": "account"
+    },
+    "782": {
+      "code": 782,
+      "severity": "error",
+      "message_en": "Email address too short.",
+      "message_ja": "メールアドレスが短すぎます。",
+      "solution_ja": "有効なメールアドレスを入力してください。",
+      "category": "account"
+    },
+    "783": {
+      "code": 783,
+      "severity": "error",
+      "message_en": "Country code size invalid.",
+      "message_ja": "国コードのサイズが無効です。",
+      "solution_ja": "2文字の国コード（例：US、JP、GB）を使用してください。",
+      "category": "account"
+    },
+    "784": {
+      "code": 784,
+      "severity": "error",
+      "message_en": "Email already in use.",
+      "message_ja": "このメールアドレスはすでに使用されています。",
+      "solution_ja": "別のメールアドレスを使用してください。このメールは他のeBayアカウントに登録されています。",
+      "category": "account"
+    },
+    "785": {
+      "code": 785,
+      "severity": "error",
+      "message_en": "Email already in use.",
+      "message_ja": "このメールアドレスはすでに使用されています。",
+      "solution_ja": "別のメールアドレスを使用してください。",
+      "category": "account"
+    },
+    "786": {
+      "code": 786,
+      "severity": "error",
+      "message_en": "Unknown error.",
+      "message_ja": "不明なエラーが発生しました。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。繰り返す場合はeBayサポートに連絡してください。",
+      "category": "other"
+    },
+    "797": {
+      "code": 797,
+      "severity": "error",
+      "message_en": "Tag reserved for eBay admin use.",
+      "message_ja": "このタグはeBay管理者専用です。",
+      "solution_ja": "このタグは一般ユーザーには使用できません。リクエストからこのタグを削除してください。",
+      "category": "api"
+    },
+    "799": {
+      "code": 799,
+      "severity": "error",
+      "message_en": "Subtitles limited to 55 characters.",
+      "message_ja": "サブタイトルは55文字以内に制限されています。",
+      "solution_ja": "サブタイトルを55文字以内に収めてください。重要な情報を優先して簡潔にまとめてください。",
+      "category": "listing"
+    },
+    "812": {
+      "code": 812,
+      "severity": "error",
+      "message_en": "Cannot retrieve buyer information.",
+      "message_ja": "バイヤー情報を取得できません。",
+      "solution_ja": "取引が成立しているか確認してください。バイヤー情報は取引成立後にのみ取得可能です。",
+      "category": "account"
+    },
+    "819": {
+      "code": 819,
+      "severity": "error",
+      "message_en": "Total smaller than item price.",
+      "message_ja": "合計金額が商品価格より小さいです。",
+      "solution_ja": "合計金額が商品価格以上になるよう修正してください。",
+      "category": "payment"
+    },
+    "834": {
+      "code": 834,
+      "severity": "error",
+      "message_en": "Already left feedback for transaction.",
+      "message_ja": "この取引にはすでにフィードバックを残しています。",
+      "solution_ja": "同じ取引に対して複数回フィードバックを残すことはできません。",
+      "category": "feedback"
+    },
+    "835": {
+      "code": 835,
+      "severity": "error",
+      "message_en": "Need Premier/Business PayPal account.",
+      "message_ja": "PayPalのPremierまたはBusinessアカウントが必要です。",
+      "solution_ja": "PayPalアカウントをPremierまたはBusinessにアップグレードしてください。",
+      "category": "payment"
+    },
+    "836": {
+      "code": 836,
+      "severity": "error",
+      "message_en": "Upgrade PayPal or disable immediate.",
+      "message_ja": "PayPalをアップグレードするか、即時支払いを無効にしてください。",
+      "solution_ja": "PayPalのPremier/Businessアカウントにアップグレードするか、即時支払い（Immediate Payment）オプションを無効にしてください。",
+      "category": "payment"
+    },
+    "837": {
+      "code": 837,
+      "severity": "error",
+      "message_en": "Category doesn't support immediate.",
+      "message_ja": "このカテゴリは即時支払いに対応していません。",
+      "solution_ja": "即時支払い（Immediate Payment）オプションを無効にしてください。",
+      "category": "payment"
+    },
+    "838": {
+      "code": 838,
+      "severity": "warning",
+      "message_en": "Immediate payment removed.",
+      "message_ja": "即時支払いオプションが削除されました。",
+      "solution_ja": "この出品形式では即時支払いが使用できないため、自動的に削除されました。",
+      "category": "payment"
+    },
+    "839": {
+      "code": 839,
+      "severity": "error",
+      "message_en": "BIN exceeds _replaceable_value_.",
+      "message_ja": "即決価格が上限「_replaceable_value_」を超えています。",
+      "solution_ja": "即決価格をカテゴリの上限額以下に設定してください。",
+      "category": "listing"
+    },
+    "840": {
+      "code": 840,
+      "severity": "error",
+      "message_en": "Item scheduled to start.",
+      "message_ja": "アイテムは開始予約済みです。",
+      "solution_ja": "予約開始のスケジュールが設定されています。変更が必要な場合は予約をキャンセルしてください。",
+      "category": "listing"
+    },
+    "841": {
+      "code": 841,
+      "severity": "error",
+      "message_en": "User suspended.",
+      "message_ja": "ユーザーがサスペンドされています。",
+      "solution_ja": "アカウントがサスペンドされています。eBayサポートに連絡してサスペンドの解除手続きをしてください。",
+      "category": "account"
+    },
+    "843": {
+      "code": 843,
+      "severity": "error",
+      "message_en": "Immediate payment unavailable.",
+      "message_ja": "即時支払いが利用できません。",
+      "solution_ja": "即時支払いオプションを無効にしてください。",
+      "category": "payment"
+    },
+    "844": {
+      "code": 844,
+      "severity": "error",
+      "message_en": "Immediate payment PayPal email needed.",
+      "message_ja": "即時支払いにはPayPalメールアドレスが必要です。",
+      "solution_ja": "PayPalメールアドレスを設定してください。",
+      "category": "payment"
+    },
+    "845": {
+      "code": 845,
+      "severity": "error",
+      "message_en": "Immediate payment seller missing.",
+      "message_ja": "即時支払いのセラー情報が不足しています。",
+      "solution_ja": "セラー情報を設定してください。",
+      "category": "payment"
+    },
+    "846": {
+      "code": 846,
+      "severity": "error",
+      "message_en": "Immediate payment category ID missing.",
+      "message_ja": "即時支払いのカテゴリIDが不足しています。",
+      "solution_ja": "カテゴリIDを指定してください。",
+      "category": "payment"
+    },
+    "847": {
+      "code": 847,
+      "severity": "error",
+      "message_en": "Immediate payment format missing.",
+      "message_ja": "即時支払いの出品形式が不足しています。",
+      "solution_ja": "出品形式を指定してください。",
+      "category": "payment"
+    },
+    "848": {
+      "code": 848,
+      "severity": "error",
+      "message_en": "Immediate payment BIN price missing.",
+      "message_ja": "即時支払いの即決価格が不足しています。",
+      "solution_ja": "Buy It Now価格を設定してください。即時支払いにはBIN価格が必須です。",
+      "category": "payment"
+    },
+    "850": {
+      "code": 850,
+      "severity": "error",
+      "message_en": "Item not listed with immediate payment.",
+      "message_ja": "このアイテムは即時支払いで出品されていません。",
+      "solution_ja": "このアイテムには即時支払いオプションが設定されていません。",
+      "category": "payment"
+    },
+    "851": {
+      "code": 851,
+      "severity": "error",
+      "message_en": "Requested quantity exceeds available.",
+      "message_ja": "リクエストされた数量が在庫数を超えています。",
+      "solution_ja": "在庫数以下の数量を指定してください。",
+      "category": "listing"
+    },
+    "852": {
+      "code": 852,
+      "severity": "error",
+      "message_en": "Bidding started, BIN unavailable.",
+      "message_ja": "入札が開始されたため、Buy It Nowが利用できなくなりました。",
+      "solution_ja": "入札が入ると即決購入はできなくなります。入札に参加するか、別の出品を探してください。",
+      "category": "listing"
+    },
+    "855": {
+      "code": 855,
+      "severity": "error",
+      "message_en": "Buyer ID not registered.",
+      "message_ja": "バイヤーIDが登録されていません。",
+      "solution_ja": "バイヤーのユーザーIDが正しいか確認してください。",
+      "category": "account"
+    },
+    "859": {
+      "code": 859,
+      "severity": "error",
+      "message_en": "Seller revised BIN price.",
+      "message_ja": "セラーが即決価格を変更しました。",
+      "solution_ja": "最新の即決価格を確認してから再度お試しください。",
+      "category": "listing"
+    },
+    "863": {
+      "code": 863,
+      "severity": "error",
+      "message_en": "Immediate payment needs PayPal.",
+      "message_ja": "即時支払いにはPayPalが必要です。",
+      "solution_ja": "即時支払いを利用するにはPayPalを支払い方法として設定してください。",
+      "category": "payment"
+    },
+    "864": {
+      "code": 864,
+      "severity": "error",
+      "message_en": "Currency value invalid.",
+      "message_ja": "通貨の値が無効です。",
+      "solution_ja": "有効な通貨コード（USD、GBP、EUR等）を指定してください。",
+      "category": "payment"
+    },
+    "865": {
+      "code": 865,
+      "severity": "error",
+      "message_en": "Date invalid for tag.",
+      "message_ja": "タグの日付が無効です。",
+      "solution_ja": "正しい日付形式（ISO 8601）で日付を指定してください。",
+      "category": "api"
+    },
+    "866": {
+      "code": 866,
+      "severity": "error",
+      "message_en": "Amount invalid for tag.",
+      "message_ja": "タグの金額が無効です。",
+      "solution_ja": "正の数値で金額を指定してください。",
+      "category": "payment"
+    },
+    "867": {
+      "code": 867,
+      "severity": "error",
+      "message_en": "Payment status invalid.",
+      "message_ja": "支払い状態が無効です。",
+      "solution_ja": "有効な支払い状態の値を指定してください。",
+      "category": "payment"
+    },
+    "868": {
+      "code": 868,
+      "severity": "error",
+      "message_en": "Payment type invalid.",
+      "message_ja": "支払い種類が無効です。",
+      "solution_ja": "有効な支払い種類を指定してください。",
+      "category": "payment"
+    },
+    "869": {
+      "code": 869,
+      "severity": "error",
+      "message_en": "Value invalid for tag.",
+      "message_ja": "タグの値が無効です。",
+      "solution_ja": "正しい形式と範囲の値を指定してください。",
+      "category": "api"
+    },
+    "870": {
+      "code": 870,
+      "severity": "error",
+      "message_en": "Duplicate call with same transaction ID.",
+      "message_ja": "同じトランザクションIDで重複したAPIコールです。",
+      "solution_ja": "同じトランザクションIDを使って2回リクエストしないでください。新しいトランザクションIDを使用してください。",
+      "category": "api"
+    },
+    "872": {
+      "code": 872,
+      "severity": "error",
+      "message_en": "Transaction not processed.",
+      "message_ja": "トランザクションが処理されませんでした。",
+      "solution_ja": "トランザクションの処理に失敗しました。しばらく待ってからリトライしてください。",
+      "category": "payment"
+    },
+    "873": {
+      "code": 873,
+      "severity": "warning",
+      "message_en": "Purchase successful but transaction failed.",
+      "message_ja": "購入は成功しましたが、トランザクション記録の作成に失敗しました。",
+      "solution_ja": "購入自体は成功しています。My eBayで取引状況を確認してください。",
+      "category": "payment"
+    },
+    "878": {
+      "code": 878,
+      "severity": "error",
+      "message_en": "API version not supported.",
+      "message_ja": "このAPIバージョンはサポートされていません。",
+      "solution_ja": "サポートされているAPIバージョン（CompatibilityLevel）に更新してください。",
+      "category": "api"
+    },
+    "886": {
+      "code": 886,
+      "severity": "error",
+      "message_en": "UPS letter incompatible with service.",
+      "message_ja": "UPSレターはこの配送サービスと互換性がありません。",
+      "solution_ja": "荷物の種類またはUPSの配送サービスを変更してください。",
+      "category": "shipping"
+    },
+    "887": {
+      "code": 887,
+      "severity": "error",
+      "message_en": "USPS envelope incompatible.",
+      "message_ja": "USPS封筒はこの配送サービスと互換性がありません。",
+      "solution_ja": "荷物の種類またはUSPSの配送サービスを変更してください。",
+      "category": "shipping"
+    },
+    "889": {
+      "code": 889,
+      "severity": "error",
+      "message_en": "\"_replaceable_value_\" not subscribed to SMP.",
+      "message_ja": "「_replaceable_value_」はSelling Manager Proに登録されていません。",
+      "solution_ja": "Selling Manager Proのサブスクリプションに登録してください。eBayのツール設定から申し込めます。",
+      "category": "account"
+    },
+    "890": {
+      "code": 890,
+      "severity": "error",
+      "message_en": "GroupID specified invalid.",
+      "message_ja": "指定されたGroupIDが無効です。",
+      "solution_ja": "有効なGroupIDを指定してください。",
+      "category": "api"
+    },
+    "891": {
+      "code": 891,
+      "severity": "error",
+      "message_en": "Product doesn't exist in folder.",
+      "message_ja": "商品がフォルダ内に存在しません。",
+      "solution_ja": "正しいフォルダIDと商品IDを指定してください。",
+      "category": "listing"
+    },
+    "892": {
+      "code": 892,
+      "severity": "error",
+      "message_en": "Folder name exceeds _replaceable_value_ characters.",
+      "message_ja": "フォルダ名が_replaceable_value_文字を超えています。",
+      "solution_ja": "フォルダ名を文字数制限内に収めてください。",
+      "category": "listing"
+    },
+    "893": {
+      "code": 893,
+      "severity": "error",
+      "message_en": "Folder name must be alphanumeric.",
+      "message_ja": "フォルダ名は英数字でなければなりません。",
+      "solution_ja": "フォルダ名に英数字のみを使用してください。",
+      "category": "listing"
+    },
+    "894": {
+      "code": 894,
+      "severity": "error",
+      "message_en": "Product name exceeds _replaceable_value_ characters.",
+      "message_ja": "商品名が_replaceable_value_文字を超えています。",
+      "solution_ja": "商品名を文字数制限内に収めてください。",
+      "category": "listing"
+    },
+    "895": {
+      "code": 895,
+      "severity": "error",
+      "message_en": "Product name must be alphanumeric.",
+      "message_ja": "商品名は英数字でなければなりません。",
+      "solution_ja": "商品名に英数字のみを使用してください。",
+      "category": "listing"
+    },
+    "896": {
+      "code": 896,
+      "severity": "error",
+      "message_en": "Cannot exceed _replaceable_value_ templates.",
+      "message_ja": "テンプレート数が上限（_replaceable_value_）を超えています。",
+      "solution_ja": "不要なテンプレートを削除してから新しいテンプレートを作成してください。",
+      "category": "listing"
+    },
+    "897": {
+      "code": 897,
+      "severity": "error",
+      "message_en": "Cannot exceed _replaceable_value_ folders.",
+      "message_ja": "フォルダ数が上限（_replaceable_value_）を超えています。",
+      "solution_ja": "不要なフォルダを削除してから新しいフォルダを作成してください。",
+      "category": "listing"
+    },
+    "898": {
+      "code": 898,
+      "severity": "error",
+      "message_en": "Part number exceeds _replaceable_value_ characters.",
+      "message_ja": "パーツ番号が_replaceable_value_文字を超えています。",
+      "solution_ja": "パーツ番号を文字数制限内に収めてください。",
+      "category": "listing"
+    },
+    "899": {
+      "code": 899,
+      "severity": "error",
+      "message_en": "Part number must be alphanumeric.",
+      "message_ja": "パーツ番号は英数字でなければなりません。",
+      "solution_ja": "パーツ番号に英数字のみを使用してください。",
+      "category": "listing"
+    },
+    "900": {
+      "code": 900,
+      "severity": "error",
+      "message_en": "Selling Manager Pro unavailable.",
+      "message_ja": "Selling Manager Proが利用できません。",
+      "solution_ja": "Selling Manager Proのサブスクリプションを確認してください。eBayストアの登録が必要な場合があります。",
+      "category": "account"
+    },
+    "901": {
+      "code": 901,
+      "severity": "error",
+      "message_en": "Unit cost currency invalid.",
+      "message_ja": "単価の通貨が無効です。",
+      "solution_ja": "有効な通貨コードを指定してください。",
+      "category": "listing"
+    },
+    "902": {
+      "code": 902,
+      "severity": "error",
+      "message_en": "Unit cost cannot be less than 0.",
+      "message_ja": "単価は0未満にできません。",
+      "solution_ja": "0以上の単価を指定してください。",
+      "category": "listing"
+    },
+    "903": {
+      "code": 903,
+      "severity": "error",
+      "message_en": "Attribute set not found for version.",
+      "message_ja": "このバージョンの属性セットが見つかりません。",
+      "solution_ja": "最新のカテゴリ属性バージョンを使用してください。GetCategorySpecificsで最新情報を取得してください。",
+      "category": "listing"
+    },
+    "904": {
+      "code": 904,
+      "severity": "error",
+      "message_en": "UserId \"_replaceable_value_\" invalid.",
+      "message_ja": "ユーザーID「_replaceable_value_」が無効です。",
+      "solution_ja": "ユーザーIDが正しいか確認してください。",
+      "category": "account"
+    },
+    "905": {
+      "code": 905,
+      "severity": "warning",
+      "message_en": "Enable eBay checkout for CIP+.",
+      "message_ja": "CIP+を使用するにはeBayチェックアウトを有効にしてください。",
+      "solution_ja": "eBayのチェックアウト設定を有効にしてください。",
+      "category": "payment"
+    },
+    "906": {
+      "code": 906,
+      "severity": "error",
+      "message_en": "Templates for motors not supported.",
+      "message_ja": "自動車カテゴリのテンプレートはサポートされていません。",
+      "solution_ja": "自動車カテゴリではテンプレート機能は使用できません。直接出品してください。",
+      "category": "listing"
+    },
+    "907": {
+      "code": 907,
+      "severity": "error",
+      "message_en": "Available to list quantity invalid.",
+      "message_ja": "出品可能数量が無効です。",
+      "solution_ja": "0以上の有効な数量を指定してください。",
+      "category": "listing"
+    },
+    "908": {
+      "code": 908,
+      "severity": "error",
+      "message_en": "Enter folder name.",
+      "message_ja": "フォルダ名を入力してください。",
+      "solution_ja": "フォルダ名を入力してください。空白にはできません。",
+      "category": "listing"
+    },
+    "909": {
+      "code": 909,
+      "severity": "error",
+      "message_en": "Enter product name.",
+      "message_ja": "商品名を入力してください。",
+      "solution_ja": "商品名を入力してください。空白にはできません。",
+      "category": "listing"
+    },
+    "910": {
+      "code": 910,
+      "severity": "warning",
+      "message_en": "Update item specifics to continue.",
+      "message_ja": "Item Specificsを更新してください。",
+      "solution_ja": "商品のItem Specificsを最新の情報に更新してください。カテゴリの必須項目が変更された可能性があります。",
+      "category": "listing"
+    },
+    "911": {
+      "code": 911,
+      "severity": "error",
+      "message_en": "Not a multi-select attribute.",
+      "message_ja": "この属性は複数選択ではありません。",
+      "solution_ja": "1つの値のみを指定してください。この属性は複数の値を同時に選択できません。",
+      "category": "listing"
+    },
+    "912": {
+      "code": 912,
+      "severity": "error",
+      "message_en": "Invalid value for \"_replaceable_value_\".",
+      "message_ja": "「_replaceable_value_」に対して無効な値です。",
+      "solution_ja": "この属性に許可された値を指定してください。GetCategorySpecificsで有効な値の一覧を確認できます。",
+      "category": "listing"
+    },
+    "913": {
+      "code": 913,
+      "severity": "error",
+      "message_en": "Order \"_replaceable_value_\" not found.",
+      "message_ja": "注文「_replaceable_value_」が見つかりません。",
+      "solution_ja": "注文ID（OrderID）が正しいか確認してください。",
+      "category": "payment"
+    },
+    "915": {
+      "code": 915,
+      "severity": "warning",
+      "message_en": "Current version \"_replaceable_value_\".",
+      "message_ja": "属性の現在のバージョンは「_replaceable_value_」です。",
+      "solution_ja": "属性バージョンが更新されました。最新バージョンを使用することを推奨します。",
+      "category": "listing"
+    },
+    "916": {
+      "code": 916,
+      "severity": "warning",
+      "message_en": "Read-only item specifics dropped.",
+      "message_ja": "読み取り専用のItem Specificsが削除されました。",
+      "solution_ja": "この警告は通常無視して問題ありません。読み取り専用の項目は自動的に処理されます。",
+      "category": "listing"
+    },
+    "917": {
+      "code": 917,
+      "severity": "error",
+      "message_en": "Attribute set doesn't match category.",
+      "message_ja": "属性セットがカテゴリと一致しません。",
+      "solution_ja": "カテゴリに対応した正しい属性セットIDを使用してください。GetCategorySpecificsで確認できます。",
+      "category": "listing"
+    },
+    "918": {
+      "code": 918,
+      "severity": "error",
+      "message_en": "Business features country restriction.",
+      "message_ja": "ビジネス機能は国の制限があります。",
+      "solution_ja": "この機能はお使いのeBayサイト（国）では利用できません。",
+      "category": "listing"
+    },
+    "919": {
+      "code": 919,
+      "severity": "error",
+      "message_en": "Business features not in category.",
+      "message_ja": "このカテゴリではビジネス機能が利用できません。",
+      "solution_ja": "ビジネス機能に対応したカテゴリで出品してください。",
+      "category": "listing"
+    },
+    "920": {
+      "code": 920,
+      "severity": "error",
+      "message_en": "Confirm business seller status.",
+      "message_ja": "ビジネスセラーの確認が必要です。",
+      "solution_ja": "eBayでビジネスセラーとして登録を完了してください。",
+      "category": "account"
+    },
+    "921": {
+      "code": 921,
+      "severity": "error",
+      "message_en": "Business features unavailable on site.",
+      "message_ja": "このサイトではビジネス機能が利用できません。",
+      "solution_ja": "ビジネス機能に対応したeBayサイトを使用してください。",
+      "category": "listing"
+    },
+    "922": {
+      "code": 922,
+      "severity": "error",
+      "message_en": "Unit cost must be >= 0.",
+      "message_ja": "単価は0以上でなければなりません。",
+      "solution_ja": "0以上の単価を指定してください。",
+      "category": "listing"
+    },
+    "924": {
+      "code": 924,
+      "severity": "warning",
+      "message_en": "Dropping invalid attribute.",
+      "message_ja": "無効な属性が削除されました。",
+      "solution_ja": "出品は正常に処理されますが、一部の属性が無効なため削除されました。Item Specificsを見直してください。",
+      "category": "listing"
+    },
+    "925": {
+      "code": 925,
+      "severity": "warning",
+      "message_en": "Dropping invalid attribute value.",
+      "message_ja": "無効な属性値が削除されました。",
+      "solution_ja": "出品は正常に処理されますが、一部の属性値が無効なため削除されました。",
+      "category": "listing"
+    },
+    "927": {
+      "code": 927,
+      "severity": "error",
+      "message_en": "VAT rate must be 0-30%.",
+      "message_ja": "VAT（付加価値税）率は0〜30%でなければなりません。",
+      "solution_ja": "VAT率を0〜30の範囲で指定してください。",
+      "category": "listing"
+    },
+    "928": {
+      "code": 928,
+      "severity": "error",
+      "message_en": "VAT items need VAT exempt seller.",
+      "message_ja": "VAT対象商品にはVAT免税セラーが必要です。",
+      "solution_ja": "VAT免税セラーとして登録を完了してください。",
+      "category": "listing"
+    },
+    "929": {
+      "code": 929,
+      "severity": "error",
+      "message_en": "Cannot specify VAT for ad format.",
+      "message_ja": "広告形式の出品にVATを指定できません。",
+      "solution_ja": "広告形式の出品からVAT設定を削除してください。",
+      "category": "listing"
+    },
+    "930": {
+      "code": 930,
+      "severity": "error",
+      "message_en": "Password or token required.",
+      "message_ja": "パスワードまたは認証トークンが必要です。",
+      "solution_ja": "リクエストに認証トークン（AuthToken）を含めてください。",
+      "category": "auth"
+    },
+    "931": {
+      "code": 931,
+      "severity": "error",
+      "message_en": "Authentication token validation failed.",
+      "message_ja": "認証トークンの検証に失敗しました。",
+      "solution_ja": "認証トークンが正しいか確認してください。トークンを再発行する必要があるかもしれません。eBayの認証フローを再度実行してください。",
+      "category": "auth"
+    },
+    "932": {
+      "code": 932,
+      "severity": "error",
+      "message_en": "Token expired, generate new token.",
+      "message_ja": "認証トークンの有効期限が切れています。新しいトークンを生成してください。",
+      "solution_ja": "eBayの認証フローを再実行して新しいトークンを取得してください。トークンの有効期限は通常18ヶ月です。",
+      "category": "auth"
+    },
+    "933": {
+      "code": 933,
+      "severity": "error",
+      "message_en": "Action must be add/update/delete.",
+      "message_ja": "アクションはadd、update、deleteのいずれかでなければなりません。",
+      "solution_ja": "有効なアクション（add/update/delete）を指定してください。",
+      "category": "api"
+    },
+    "934": {
+      "code": 934,
+      "severity": "error",
+      "message_en": "RuName required.",
+      "message_ja": "RuName（Redirect URL Name）が必要です。",
+      "solution_ja": "RuNameを指定してください。eBay Developer Portalで設定できます。",
+      "category": "auth"
+    },
+    "935": {
+      "code": 935,
+      "severity": "error",
+      "message_en": "URL invalid, requires HTTPS.",
+      "message_ja": "URLが無効です。HTTPSが必要です。",
+      "solution_ja": "https://で始まるURLを指定してください。",
+      "category": "auth"
+    },
+    "936": {
+      "code": 936,
+      "severity": "error",
+      "message_en": "RuName doesn't match application.",
+      "message_ja": "RuNameがアプリケーションと一致しません。",
+      "solution_ja": "正しいアプリケーションに紐付いたRuNameを使用してください。",
+      "category": "auth"
+    },
+    "937": {
+      "code": 937,
+      "severity": "error",
+      "message_en": "RuName already exists.",
+      "message_ja": "このRuNameはすでに存在します。",
+      "solution_ja": "別のRuNameを使用するか、既存のRuNameを削除してから再作成してください。",
+      "category": "auth"
+    },
+    "938": {
+      "code": 938,
+      "severity": "error",
+      "message_en": "RuName not found in database.",
+      "message_ja": "RuNameがデータベースに見つかりません。",
+      "solution_ja": "RuNameが正しいか確認してください。eBay Developer Portalで登録状況を確認してください。",
+      "category": "auth"
+    },
+    "939": {
+      "code": 939,
+      "severity": "error",
+      "message_en": "RuName has special characters.",
+      "message_ja": "RuNameに特殊文字が含まれています。",
+      "solution_ja": "RuNameに英数字のみを使用してください。",
+      "category": "auth"
+    },
+    "940": {
+      "code": 940,
+      "severity": "error",
+      "message_en": "RuName must be 4-64 characters.",
+      "message_ja": "RuNameは4〜64文字でなければなりません。",
+      "solution_ja": "RuNameを4〜64文字の範囲で指定してください。",
+      "category": "auth"
+    },
+    "942": {
+      "code": 942,
+      "severity": "error",
+      "message_en": "At least one variation must have qty>0.",
+      "message_ja": "少なくとも1つのバリエーションに数量1以上が必要です。",
+      "solution_ja": "バリエーション出品では、少なくとも1つのバリエーションに1以上の数量を設定してください。",
+      "category": "listing"
+    },
+    "946": {
+      "code": 946,
+      "severity": "error",
+      "message_en": "eBay system issues, try later.",
+      "message_ja": "eBayシステムの問題です。後でお試しください。",
+      "solution_ja": "eBayのシステムに一時的な問題が発生しています。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "947": {
+      "code": 947,
+      "severity": "error",
+      "message_en": "Item not found, verify item number.",
+      "message_ja": "アイテムが見つかりません。アイテム番号を確認してください。",
+      "solution_ja": "出品番号（ItemID）が正しいか確認してください。",
+      "category": "listing"
+    },
+    "948": {
+      "code": 948,
+      "severity": "error",
+      "message_en": "No non-winning bidders for SCO.",
+      "message_ja": "セカンドチャンスオファーの対象となる落札できなかった入札者がいません。",
+      "solution_ja": "このオークションには落札できなかった入札者がいないため、セカンドチャンスオファーを送信できません。",
+      "category": "listing"
+    },
+    "949": {
+      "code": 949,
+      "severity": "error",
+      "message_en": "Need non-winning bidders for SCO.",
+      "message_ja": "セカンドチャンスオファーには落札できなかった入札者が必要です。",
+      "solution_ja": "セカンドチャンスオファーは落札できなかった入札者にのみ送信できます。",
+      "category": "listing"
+    },
+    "950": {
+      "code": 950,
+      "severity": "error",
+      "message_en": "SCO not for Dutch auctions.",
+      "message_ja": "ダッチオークションではセカンドチャンスオファーは利用できません。",
+      "solution_ja": "ダッチオークション形式の出品にはセカンドチャンスオファーを送信できません。",
+      "category": "listing"
+    },
+    "951": {
+      "code": 951,
+      "severity": "error",
+      "message_en": "Wait 7 days after listing ends.",
+      "message_ja": "出品終了後7日間待つ必要があります。",
+      "solution_ja": "出品が終了してから7日以内にセカンドチャンスオファーを送信してください。",
+      "category": "listing"
+    },
+    "953": {
+      "code": 953,
+      "severity": "error",
+      "message_en": "SCO within 60 days of close.",
+      "message_ja": "セカンドチャンスオファーは出品終了後60日以内に送信する必要があります。",
+      "solution_ja": "出品終了から60日を過ぎるとセカンドチャンスオファーは送信できません。",
+      "category": "listing"
+    },
+    "954": {
+      "code": 954,
+      "severity": "error",
+      "message_en": "Must be original seller.",
+      "message_ja": "オリジナルのセラーである必要があります。",
+      "solution_ja": "セカンドチャンスオファーは元の出品者のみが送信できます。",
+      "category": "listing"
+    },
+    "955": {
+      "code": 955,
+      "severity": "error",
+      "message_en": "Relisted items ineligible for SCO.",
+      "message_ja": "再出品されたアイテムはセカンドチャンスオファーの対象外です。",
+      "solution_ja": "再出品したアイテムにはセカンドチャンスオファーを送信できません。元の出品で送信してください。",
+      "category": "listing"
+    },
+    "956": {
+      "code": 956,
+      "severity": "error",
+      "message_en": "SCO sent to all eligible bidders.",
+      "message_ja": "対象の全入札者にセカンドチャンスオファーを送信済みです。",
+      "solution_ja": "すべての対象者に既にオファーを送信しています。",
+      "category": "listing"
+    },
+    "957": {
+      "code": 957,
+      "severity": "error",
+      "message_en": "Select non-winning bidder.",
+      "message_ja": "落札できなかった入札者を選択してください。",
+      "solution_ja": "セカンドチャンスオファーを送信する入札者を指定してください。",
+      "category": "listing"
+    },
+    "959": {
+      "code": 959,
+      "severity": "error",
+      "message_en": "SCO not for format.",
+      "message_ja": "この出品形式ではセカンドチャンスオファーは利用できません。",
+      "solution_ja": "セカンドチャンスオファーはオークション形式の出品でのみ利用可能です。",
+      "category": "listing"
+    },
+    "963": {
+      "code": 963,
+      "severity": "error",
+      "message_en": "Enter valid BIN price.",
+      "message_ja": "有効な即決価格を入力してください。",
+      "solution_ja": "正の数値で即決価格を指定してください。",
+      "category": "listing"
+    },
+    "967": {
+      "code": 967,
+      "severity": "error",
+      "message_en": "Cannot send SCO, listing active.",
+      "message_ja": "出品がまだアクティブなため、セカンドチャンスオファーを送信できません。",
+      "solution_ja": "出品が終了してからセカンドチャンスオファーを送信してください。",
+      "category": "listing"
+    },
+    "974": {
+      "code": 974,
+      "severity": "error",
+      "message_en": "Bidder declined to receive SCO.",
+      "message_ja": "入札者がセカンドチャンスオファーの受信を拒否しています。",
+      "solution_ja": "この入札者はセカンドチャンスオファーの受信をオプトアウトしています。別の入札者に送信してください。",
+      "category": "listing"
+    },
+    "977": {
+      "code": 977,
+      "severity": "error",
+      "message_en": "SCO already sent for item.",
+      "message_ja": "このアイテムのセカンドチャンスオファーはすでに送信済みです。",
+      "solution_ja": "同じアイテムに対して既にオファーを送信しています。",
+      "category": "listing"
+    },
+    "978": {
+      "code": 978,
+      "severity": "error",
+      "message_en": "Only non-winning bidders eligible.",
+      "message_ja": "落札できなかった入札者のみが対象です。",
+      "solution_ja": "セカンドチャンスオファーは落札者以外の入札者にのみ送信できます。",
+      "category": "listing"
+    },
+    "979": {
+      "code": 979,
+      "severity": "error",
+      "message_en": "Cannot send SCO for expired category.",
+      "message_ja": "期限切れカテゴリのセカンドチャンスオファーは送信できません。",
+      "solution_ja": "カテゴリが有効であることを確認してください。",
+      "category": "listing"
+    },
+    "981": {
+      "code": 981,
+      "severity": "error",
+      "message_en": "No SCO for eTopps items.",
+      "message_ja": "eToppsアイテムにはセカンドチャンスオファーを送信できません。",
+      "solution_ja": "eTopps商品ではセカンドチャンスオファーは利用できません。",
+      "category": "listing"
+    },
+    "982": {
+      "code": 982,
+      "severity": "error",
+      "message_en": "BuyItNowPrice not allowed.",
+      "message_ja": "Buy It Now価格は許可されていません。",
+      "solution_ja": "この出品形式では即決価格を設定できません。BuyItNowPriceタグを削除してください。",
+      "category": "listing"
+    },
+    "983": {
+      "code": 983,
+      "severity": "error",
+      "message_en": "Item duration invalid.",
+      "message_ja": "出品期間が無効です。",
+      "solution_ja": "このカテゴリで使用できる出品期間を指定してください。",
+      "category": "listing"
+    },
+    "984": {
+      "code": 984,
+      "severity": "error",
+      "message_en": "DetailLevel invalid.",
+      "message_ja": "DetailLevelの値が無効です。",
+      "solution_ja": "有効なDetailLevel値を指定してください。",
+      "category": "api"
+    },
+    "985": {
+      "code": 985,
+      "severity": "error",
+      "message_en": "Resolve complaints before proceeding.",
+      "message_ja": "続行する前に未解決の問題を解決してください。",
+      "solution_ja": "eBayの「Resolution Center」で未解決の問題を解決してから再度お試しください。",
+      "category": "account"
+    },
+    "986": {
+      "code": 986,
+      "severity": "error",
+      "message_en": "No eligible non-winning bidders.",
+      "message_ja": "対象となる落札できなかった入札者がいません。",
+      "solution_ja": "セカンドチャンスオファーの対象者がいません。",
+      "category": "listing"
+    },
+    "990": {
+      "code": 990,
+      "severity": "error",
+      "message_en": "View invoices for older activity.",
+      "message_ja": "古いアクティビティはインボイスで確認してください。",
+      "solution_ja": "古い期間のデータはインボイス画面から確認してください。",
+      "category": "account"
+    },
+    "991": {
+      "code": 991,
+      "severity": "error",
+      "message_en": "Old invoices view eBay invoices.",
+      "message_ja": "18ヶ月以上前のインボイスはeBayのインボイス画面で確認してください。",
+      "solution_ja": "eBayのMy Account > Invoicesから古いインボイスを確認してください。",
+      "category": "account"
+    },
+    "992": {
+      "code": 992,
+      "severity": "error",
+      "message_en": "\"_replaceable_value_\" unavailable.",
+      "message_ja": "請求サービス「_replaceable_value_」が利用できません。",
+      "solution_ja": "eBayの請求システムが一時的に利用できません。しばらく待ってからリトライしてください。",
+      "category": "account"
+    },
+    "1012": {
+      "code": 1012,
+      "severity": "error",
+      "message_en": "Error sending confirmation email.",
+      "message_ja": "確認メールの送信中にエラーが発生しました。",
+      "solution_ja": "メールアドレスが正しいか確認してください。しばらく待ってからリトライしてください。",
+      "category": "account"
+    },
+    "1013": {
+      "code": 1013,
+      "severity": "error",
+      "message_en": "Confirm registration, resend email.",
+      "message_ja": "登録を確認してください。確認メールを再送信します。",
+      "solution_ja": "メールボックスを確認し、確認リンクをクリックしてください。メールが届かない場合は再送信してください。",
+      "category": "account"
+    },
+    "1014": {
+      "code": 1014,
+      "severity": "error",
+      "message_en": "Registration already confirmed.",
+      "message_ja": "登録は既に確認済みです。",
+      "solution_ja": "アカウントは既に確認されています。この操作は不要です。",
+      "category": "account"
+    },
+    "1016": {
+      "code": 1016,
+      "severity": "error",
+      "message_en": "Name contains illegal characters.",
+      "message_ja": "名前に不正な文字が含まれています。",
+      "solution_ja": "名前から特殊文字を削除してください。英数字と一般的な記号のみ使用できます。",
+      "category": "account"
+    },
+    "1017": {
+      "code": 1017,
+      "severity": "error",
+      "message_en": "Address field too short.",
+      "message_ja": "住所の入力が短すぎます。",
+      "solution_ja": "完全な住所を入力してください。",
+      "category": "account"
+    },
+    "1018": {
+      "code": 1018,
+      "severity": "error",
+      "message_en": "Phone format incorrect.",
+      "message_ja": "電話番号の形式が正しくありません。",
+      "solution_ja": "正しい電話番号の形式で入力してください。国番号を含めることを推奨します。",
+      "category": "account"
+    },
+    "1019": {
+      "code": 1019,
+      "severity": "error",
+      "message_en": "Date of birth invalid.",
+      "message_ja": "生年月日が無効です。",
+      "solution_ja": "正しい形式で生年月日を入力してください。",
+      "category": "account"
+    },
+    "1020": {
+      "code": 1020,
+      "severity": "error",
+      "message_en": "Must be 18 or older.",
+      "message_ja": "18歳以上である必要があります。",
+      "solution_ja": "eBayを利用するには18歳以上である必要があります。",
+      "category": "account"
+    },
+    "1022": {
+      "code": 1022,
+      "severity": "error",
+      "message_en": "Phone number invalid.",
+      "message_ja": "電話番号が無効です。",
+      "solution_ja": "有効な電話番号を入力してください。",
+      "category": "account"
+    },
+    "1023": {
+      "code": 1023,
+      "severity": "error",
+      "message_en": "City invalid.",
+      "message_ja": "市区町村が無効です。",
+      "solution_ja": "正しい市区町村名を入力してください。",
+      "category": "account"
+    },
+    "1024": {
+      "code": 1024,
+      "severity": "error",
+      "message_en": "State invalid.",
+      "message_ja": "州が無効です。",
+      "solution_ja": "正しい州名を入力してください。",
+      "category": "account"
+    },
+    "1025": {
+      "code": 1025,
+      "severity": "error",
+      "message_en": "PostalCode invalid.",
+      "message_ja": "郵便番号が無効です。",
+      "solution_ja": "正しい形式の郵便番号を入力してください。",
+      "category": "account"
+    },
+    "1026": {
+      "code": 1026,
+      "severity": "error",
+      "message_en": "PostalCode too short.",
+      "message_ja": "郵便番号が短すぎます。",
+      "solution_ja": "正しい桁数の郵便番号を入力してください。",
+      "category": "account"
+    },
+    "1030": {
+      "code": 1030,
+      "severity": "error",
+      "message_en": "Password must be 6+ characters.",
+      "message_ja": "パスワードは6文字以上でなければなりません。",
+      "solution_ja": "6文字以上のパスワードを設定してください。",
+      "category": "account"
+    },
+    "1031": {
+      "code": 1031,
+      "severity": "error",
+      "message_en": "Cannot use word 'password'.",
+      "message_ja": "パスワードに「password」という単語は使用できません。",
+      "solution_ja": "「password」以外のパスワードを設定してください。",
+      "category": "account"
+    },
+    "1032": {
+      "code": 1032,
+      "severity": "error",
+      "message_en": "Cannot use userid or email.",
+      "message_ja": "パスワードにユーザーIDやメールアドレスは使用できません。",
+      "solution_ja": "ユーザーIDやメールアドレスと異なるパスワードを設定してください。",
+      "category": "account"
+    },
+    "1033": {
+      "code": 1033,
+      "severity": "error",
+      "message_en": "User ID has invalid characters.",
+      "message_ja": "ユーザーIDに無効な文字が含まれています。",
+      "solution_ja": "英数字、ハイフン、アンダースコアのみを使用したユーザーIDに変更してください。",
+      "category": "account"
+    },
+    "1034": {
+      "code": 1034,
+      "severity": "error",
+      "message_en": "User ID cannot contain 'ebay'.",
+      "message_ja": "ユーザーIDに「ebay」を含めることはできません。",
+      "solution_ja": "「ebay」を含まないユーザーIDを設定してください。",
+      "category": "account"
+    },
+    "1035": {
+      "code": 1035,
+      "severity": "error",
+      "message_en": "Cannot contain @ or ( or ).",
+      "message_ja": "ユーザーIDに@、(、)を含めることはできません。",
+      "solution_ja": "これらの記号を含まないユーザーIDを設定してください。",
+      "category": "account"
+    },
+    "1036": {
+      "code": 1036,
+      "severity": "error",
+      "message_en": "Cannot contain < or >.",
+      "message_ja": "ユーザーIDに<や>を含めることはできません。",
+      "solution_ja": "これらの記号を含まないユーザーIDを設定してください。",
+      "category": "account"
+    },
+    "1037": {
+      "code": 1037,
+      "severity": "error",
+      "message_en": "User ID exceeds length limit.",
+      "message_ja": "ユーザーIDが文字数制限を超えています。",
+      "solution_ja": "より短いユーザーIDを設定してください。",
+      "category": "account"
+    },
+    "1038": {
+      "code": 1038,
+      "severity": "error",
+      "message_en": "User ID too vulgar.",
+      "message_ja": "ユーザーIDに不適切な表現が含まれています。",
+      "solution_ja": "適切なユーザーIDを設定してください。",
+      "category": "account"
+    },
+    "1039": {
+      "code": 1039,
+      "severity": "error",
+      "message_en": "User ID reserved.",
+      "message_ja": "このユーザーIDは予約済みです。",
+      "solution_ja": "別のユーザーIDを選択してください。",
+      "category": "account"
+    },
+    "1040": {
+      "code": 1040,
+      "severity": "error",
+      "message_en": "Email address invalid.",
+      "message_ja": "メールアドレスが無効です。",
+      "solution_ja": "正しい形式のメールアドレスを入力してください。",
+      "category": "account"
+    },
+    "1041": {
+      "code": 1041,
+      "severity": "error",
+      "message_en": "Must supply secret question.",
+      "message_ja": "秘密の質問を設定する必要があります。",
+      "solution_ja": "セキュリティ用の秘密の質問を選択してください。",
+      "category": "account"
+    },
+    "1042": {
+      "code": 1042,
+      "severity": "error",
+      "message_en": "Secret question invalid.",
+      "message_ja": "秘密の質問が無効です。",
+      "solution_ja": "有効な秘密の質問を選択してください。",
+      "category": "account"
+    },
+    "1043": {
+      "code": 1043,
+      "severity": "error",
+      "message_en": "Secret answer invalid.",
+      "message_ja": "秘密の質問の回答が無効です。",
+      "solution_ja": "有効な回答を入力してください。",
+      "category": "account"
+    },
+    "1044": {
+      "code": 1044,
+      "severity": "error",
+      "message_en": "User ID already in use.",
+      "message_ja": "このユーザーIDはすでに使用されています。",
+      "solution_ja": "別のユーザーIDを選択してください。",
+      "category": "account"
+    },
+    "1045": {
+      "code": 1045,
+      "severity": "error",
+      "message_en": "Confirmation code doesn't match.",
+      "message_ja": "確認コードが一致しません。",
+      "solution_ja": "正しい確認コードを入力してください。メールで受信した最新の確認コードを使用してください。",
+      "category": "account"
+    },
+    "1046": {
+      "code": 1046,
+      "severity": "error",
+      "message_en": "User ID too short.",
+      "message_ja": "ユーザーIDが短すぎます。",
+      "solution_ja": "より長いユーザーIDを設定してください。",
+      "category": "account"
+    },
+    "1047": {
+      "code": 1047,
+      "severity": "error",
+      "message_en": "Auction already closed.",
+      "message_ja": "オークションは既に終了しています。",
+      "solution_ja": "このオークションは既に終了しています。同じ商品の新しい出品を探してください。",
+      "category": "listing"
+    },
+    "1049": {
+      "code": 1049,
+      "severity": "error",
+      "message_en": "Sales tax value too large.",
+      "message_ja": "消費税の値が大きすぎます。",
+      "solution_ja": "現実的な消費税率を指定してください。",
+      "category": "listing"
+    },
+    "1050": {
+      "code": 1050,
+      "severity": "warning",
+      "message_en": "External transaction update failure.",
+      "message_ja": "外部トランザクションの更新に失敗しました。",
+      "solution_ja": "この警告は通常無視して問題ありません。取引自体は正常に処理されている可能性があります。",
+      "category": "payment"
+    },
+    "1053": {
+      "code": 1053,
+      "severity": "error",
+      "message_en": "Address preference invalid.",
+      "message_ja": "住所設定が無効です。",
+      "solution_ja": "有効な住所設定を指定してください。",
+      "category": "account"
+    },
+    "1054": {
+      "code": 1054,
+      "severity": "error",
+      "message_en": "Time to >= time from.",
+      "message_ja": "終了時間は開始時間以上でなければなりません。",
+      "solution_ja": "時間範囲を正しく設定してください。終了時間が開始時間より後になるようにしてください。",
+      "category": "api"
+    },
+    "1056": {
+      "code": 1056,
+      "severity": "error",
+      "message_en": "Cannot use both options simultaneously.",
+      "message_ja": "両方のオプションを同時に使用することはできません。",
+      "solution_ja": "排他的なオプションのどちらか一方のみを選択してください。",
+      "category": "api"
+    },
+    "1057": {
+      "code": 1057,
+      "severity": "error",
+      "message_en": "No SCO for charity items.",
+      "message_ja": "チャリティアイテムにはセカンドチャンスオファーを送信できません。",
+      "solution_ja": "チャリティ出品ではセカンドチャンスオファーは利用できません。",
+      "category": "listing"
+    },
+    "1058": {
+      "code": 1058,
+      "severity": "error",
+      "message_en": "Max 25 bidders per group.",
+      "message_ja": "1グループあたり最大25人の入札者です。",
+      "solution_ja": "入札者の数を25人以下に制限してください。",
+      "category": "listing"
+    },
+    "1059": {
+      "code": 1059,
+      "severity": "error",
+      "message_en": "No SCO for unmet reserve.",
+      "message_ja": "リザーブプライスに達していない出品にはセカンドチャンスオファーを送信できません。",
+      "solution_ja": "リザーブプライスが達成されていないため、セカンドチャンスオファーは利用できません。",
+      "category": "listing"
+    },
+    "1200": {
+      "code": 1200,
+      "severity": "error",
+      "message_en": "Service not defined or initialized.",
+      "message_ja": "サービスが定義されていない、または初期化されていません。",
+      "solution_ja": "eBayのシステムエラーです。しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "1201": {
+      "code": 1201,
+      "severity": "error",
+      "message_en": "Service marked down or disabled.",
+      "message_ja": "サービスが停止中または無効化されています。",
+      "solution_ja": "このサービスは現在メンテナンス中です。eBayのシステムステータスを確認し、しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "1202": {
+      "code": 1202,
+      "severity": "error",
+      "message_en": "URL malformatted.",
+      "message_ja": "URLの形式が不正です。",
+      "solution_ja": "正しいURL形式（https://...）を使用してください。",
+      "category": "api"
+    },
+    "1203": {
+      "code": 1203,
+      "severity": "error",
+      "message_en": "HTTP request failed.",
+      "message_ja": "HTTPリクエストが失敗しました。",
+      "solution_ja": "eBayのサーバーに接続できません。ネットワーク接続を確認し、しばらく待ってからリトライしてください。",
+      "category": "api"
+    },
+    "1500": {
+      "code": 1500,
+      "severity": "error",
+      "message_en": "Invalid subscription product ID.",
+      "message_ja": "サブスクリプション製品IDが無効です。",
+      "solution_ja": "正しいサブスクリプション製品IDを指定してください。",
+      "category": "account"
+    },
+    "1501": {
+      "code": 1501,
+      "severity": "error",
+      "message_en": "Records exceed fetch limit.",
+      "message_ja": "レコード数が取得上限を超えています。",
+      "solution_ja": "日付範囲を狭めるか、ページネーションを使用してデータを分割取得してください。",
+      "category": "api"
+    },
+    "1502": {
+      "code": 1502,
+      "severity": "error",
+      "message_en": "DateRangeTo >= DateRangeFrom.",
+      "message_ja": "終了日は開始日以上でなければなりません。",
+      "solution_ja": "日付範囲を正しく設定してください。",
+      "category": "api"
+    },
+    "1503": {
+      "code": 1503,
+      "severity": "error",
+      "message_en": "No offer history found.",
+      "message_ja": "オファー履歴が見つかりません。",
+      "solution_ja": "指定した条件でオファー履歴がありません。条件を変更してお試しください。",
+      "category": "listing"
+    },
+    "1504": {
+      "code": 1504,
+      "severity": "error",
+      "message_en": "Item ID invalid.",
+      "message_ja": "アイテムIDが無効です。",
+      "solution_ja": "正しいアイテムID（数値）を指定してください。",
+      "category": "listing"
+    },
+    "1505": {
+      "code": 1505,
+      "severity": "error",
+      "message_en": "No item found.",
+      "message_ja": "アイテムが見つかりません。",
+      "solution_ja": "アイテムIDが正しいか確認してください。削除済みの場合はアクセスできません。",
+      "category": "listing"
+    },
+    "1506": {
+      "code": 1506,
+      "severity": "error",
+      "message_en": "No item details found.",
+      "message_ja": "アイテムの詳細が見つかりません。",
+      "solution_ja": "アイテムIDが正しいか確認してください。",
+      "category": "listing"
+    },
+    "1507": {
+      "code": 1507,
+      "severity": "error",
+      "message_en": "DetailLevel invalid.",
+      "message_ja": "DetailLevelの値が無効です。",
+      "solution_ja": "有効なDetailLevel値を指定してください。",
+      "category": "api"
+    },
+    "1508": {
+      "code": 1508,
+      "severity": "error",
+      "message_en": "Parameter combination unsupported.",
+      "message_ja": "パラメータの組み合わせがサポートされていません。",
+      "solution_ja": "リクエストパラメータの組み合わせを見直してください。同時に使用できない設定がないか確認してください。",
+      "category": "api"
+    },
+    "1509": {
+      "code": 1509,
+      "severity": "error",
+      "message_en": "Date range invalid.",
+      "message_ja": "日付範囲が無効です。",
+      "solution_ja": "正しい日付範囲を指定してください。開始日が終了日より前であることを確認してください。",
+      "category": "api"
+    },
+    "1510": {
+      "code": 1510,
+      "severity": "error",
+      "message_en": "Items per page invalid.",
+      "message_ja": "1ページあたりのアイテム数が無効です。",
+      "solution_ja": "有効なEntriesPerPage値（通常1〜200）を指定してください。",
+      "category": "api"
+    },
+    "1511": {
+      "code": 1511,
+      "severity": "error",
+      "message_en": "Next index invalid.",
+      "message_ja": "次のインデックスが無効です。",
+      "solution_ja": "有効なページネーションインデックスを指定してください。",
+      "category": "api"
+    },
+    "1512": {
+      "code": 1512,
+      "severity": "error",
+      "message_en": "Note type invalid.",
+      "message_ja": "メモの種類が無効です。",
+      "solution_ja": "有効なメモの種類を指定してください。",
+      "category": "api"
+    },
+    "1513": {
+      "code": 1513,
+      "severity": "error",
+      "message_en": "Secondary note type invalid.",
+      "message_ja": "セカンダリメモの種類が無効です。",
+      "solution_ja": "有効なセカンダリメモの種類を指定してください。",
+      "category": "api"
+    },
+    "1520": {
+      "code": 1520,
+      "severity": "error",
+      "message_en": "Forum type unknown.",
+      "message_ja": "フォーラムの種類が不明です。",
+      "solution_ja": "有効なフォーラムタイプを指定してください。",
+      "category": "other"
+    },
+    "1521": {
+      "code": 1521,
+      "severity": "error",
+      "message_en": "Forum ID unknown.",
+      "message_ja": "フォーラムIDが不明です。",
+      "solution_ja": "有効なフォーラムIDを指定してください。",
+      "category": "other"
+    },
+    "1522": {
+      "code": 1522,
+      "severity": "error",
+      "message_en": "Site ID unknown.",
+      "message_ja": "サイトIDが不明です。",
+      "solution_ja": "有効なサイトIDを指定してください。例：US=0, UK=3, DE=77。",
+      "category": "api"
+    },
+    "1523": {
+      "code": 1523,
+      "severity": "error",
+      "message_en": "Rule ID unknown.",
+      "message_ja": "ルールIDが不明です。",
+      "solution_ja": "有効なルールIDを指定してください。",
+      "category": "other"
+    },
+    "1524": {
+      "code": 1524,
+      "severity": "error",
+      "message_en": "Email type unknown.",
+      "message_ja": "メールの種類が不明です。",
+      "solution_ja": "有効なメールタイプを指定してください。",
+      "category": "other"
+    },
+    "1525": {
+      "code": 1525,
+      "severity": "error",
+      "message_en": "Violation date invalid.",
+      "message_ja": "違反日が無効です。",
+      "solution_ja": "正しい日付形式で違反日を指定してください。",
+      "category": "other"
+    },
+    "1530": {
+      "code": 1530,
+      "severity": "error",
+      "message_en": "User ID already taken.",
+      "message_ja": "このユーザーIDはすでに使用されています。",
+      "solution_ja": "別のユーザーIDを選択してください。",
+      "category": "account"
+    },
+    "1531": {
+      "code": 1531,
+      "severity": "error",
+      "message_en": "Can change ID once per 30 days.",
+      "message_ja": "ユーザーIDの変更は30日に1回のみ可能です。",
+      "solution_ja": "前回の変更から30日以上経過してからIDを変更してください。",
+      "category": "account"
+    },
+    "1532": {
+      "code": 1532,
+      "severity": "error",
+      "message_en": "Cannot change country if past due.",
+      "message_ja": "未払いがある場合は国を変更できません。",
+      "solution_ja": "未払いの手数料を精算してから国の変更を行ってください。",
+      "category": "account"
+    },
+    "3021": {
+      "code": 3021,
+      "severity": "error",
+      "message_en": "System unavailable, try again.",
+      "message_ja": "システムが利用できません。しばらく待ってからお試しください。",
+      "solution_ja": "eBayのシステムが一時的にダウンしています。数分待ってからリトライしてください。",
+      "category": "api"
+    },
+    "5000": {
+      "code": 5000,
+      "severity": "error",
+      "message_en": "Item specific \"_replaceable_value_\" required.",
+      "message_ja": "Item Specific「_replaceable_value_」が必須です。",
+      "solution_ja": "指定されたItem Specificを出品に追加してください。カテゴリの必須項目はGetCategorySpecificsで確認できます。よくある必須項目：Brand、MPN、Condition等。",
+      "category": "listing"
+    },
+    "5012": {
+      "code": 5012,
+      "severity": "error",
+      "message_en": "Numeric value out of range.",
+      "message_ja": "数値が範囲外です。",
+      "solution_ja": "Item Specificの数値を有効な範囲内に設定してください。",
+      "category": "listing"
+    },
+    "5013": {
+      "code": 5013,
+      "severity": "warning",
+      "message_en": "String value too long, removed.",
+      "message_ja": "文字列の値が長すぎるため削除されました。",
+      "solution_ja": "Item Specificの値を短くしてください。通常65文字以内に収める必要があります。",
+      "category": "listing"
+    },
+    "5014": {
+      "code": 5014,
+      "severity": "error",
+      "message_en": "Value must be valid URL.",
+      "message_ja": "値は有効なURLでなければなりません。",
+      "solution_ja": "正しいURL形式（https://...）で値を指定してください。",
+      "category": "listing"
+    },
+    "5015": {
+      "code": 5015,
+      "severity": "error",
+      "message_en": "Value has invalid format.",
+      "message_ja": "値の形式が無効です。",
+      "solution_ja": "Item Specificの値を正しい形式で入力してください。",
+      "category": "listing"
+    },
+    "5016": {
+      "code": 5016,
+      "severity": "error",
+      "message_en": "Invalid number separator.",
+      "message_ja": "数値の区切り文字が無効です。",
+      "solution_ja": "正しい数値の区切り文字を使用してください。",
+      "category": "listing"
+    },
+    "5017": {
+      "code": 5017,
+      "severity": "error",
+      "message_en": "Should have between values.",
+      "message_ja": "値の数が範囲外です。",
+      "solution_ja": "指定された範囲内の数の値を選択してください。",
+      "category": "listing"
+    },
+    "5018": {
+      "code": 5018,
+      "severity": "error",
+      "message_en": "Maximum values exceeded.",
+      "message_ja": "値の最大数を超えています。",
+      "solution_ja": "Item Specificの値の数を制限内に減らしてください。",
+      "category": "listing"
+    },
+    "5019": {
+      "code": 5019,
+      "severity": "error",
+      "message_en": "Minimum values not met.",
+      "message_ja": "値の最小数を満たしていません。",
+      "solution_ja": "Item Specificに必要な最小数の値を追加してください。",
+      "category": "listing"
+    },
+    "5028": {
+      "code": 5028,
+      "severity": "error",
+      "message_en": "Value not valid for item specific.",
+      "message_ja": "Item Specificに対して値が無効です。",
+      "solution_ja": "このItem Specificで許可されている値を使用してください。GetCategorySpecificsで有効な値の一覧を確認できます。",
+      "category": "listing"
+    },
+    "5030": {
+      "code": 5030,
+      "severity": "error",
+      "message_en": "Date value invalid.",
+      "message_ja": "日付の値が無効です。",
+      "solution_ja": "正しい日付形式で値を指定してください。",
+      "category": "listing"
+    },
+    "5035": {
+      "code": 5035,
+      "severity": "warning",
+      "message_en": "Invalid item specific dropped.",
+      "message_ja": "無効なItem Specificが削除されました。",
+      "solution_ja": "この警告は通常無視して問題ありません。出品は処理されますが、一部の無効なItem Specificは自動的に削除されました。",
+      "category": "listing"
+    },
+    "5037": {
+      "code": 5037,
+      "severity": "error",
+      "message_en": "Contains banned or improper word.",
+      "message_ja": "禁止語句または不適切な単語が含まれています。",
+      "solution_ja": "出品のタイトル、説明、またはItem Specificから不適切な表現を削除してください。",
+      "category": "listing"
+    },
+    "5044": {
+      "code": 5044,
+      "severity": "error",
+      "message_en": "Invalid thousands separator.",
+      "message_ja": "桁区切り文字が無効です。",
+      "solution_ja": "正しい桁区切り文字（コンマまたはピリオド）を使用してください。",
+      "category": "listing"
+    },
+    "5045": {
+      "code": 5045,
+      "severity": "error",
+      "message_en": "Invalid decimal separator.",
+      "message_ja": "小数点区切り文字が無効です。",
+      "solution_ja": "正しい小数点区切り文字を使用してください。",
+      "category": "listing"
+    },
+    "5046": {
+      "code": 5046,
+      "severity": "error",
+      "message_en": "HTML in text not allowed.",
+      "message_ja": "テキスト内のHTMLは許可されていません。",
+      "solution_ja": "Item Specificの値からHTMLタグを削除してください。プレーンテキストのみ使用できます。",
+      "category": "listing"
+    },
+    "5047": {
+      "code": 5047,
+      "severity": "error",
+      "message_en": "Invalid date range value.",
+      "message_ja": "日付範囲の値が無効です。",
+      "solution_ja": "正しい日付範囲を指定してください。",
+      "category": "listing"
+    },
+    "5048": {
+      "code": 5048,
+      "severity": "error",
+      "message_en": "Value not in proper format.",
+      "message_ja": "値が正しい形式ではありません。",
+      "solution_ja": "Item Specificの値を正しい形式で入力してください。",
+      "category": "listing"
+    },
+    "5100": {
+      "code": 5100,
+      "severity": "error",
+      "message_en": "Invalid to/from date.",
+      "message_ja": "開始日/終了日が無効です。",
+      "solution_ja": "正しい日付形式で日付を指定してください。",
+      "category": "listing"
+    },
+    "5101": {
+      "code": 5101,
+      "severity": "error",
+      "message_en": "Value not valid number.",
+      "message_ja": "値が有効な数値ではありません。",
+      "solution_ja": "Item Specificに数値を正しい形式で入力してください。",
+      "category": "listing"
+    },
+    "5102": {
+      "code": 5102,
+      "severity": "error",
+      "message_en": "Enter date for value.",
+      "message_ja": "日付の値を入力してください。",
+      "solution_ja": "日付型のItem Specificに正しい日付を入力してください。",
+      "category": "listing"
+    },
+    "5103": {
+      "code": 5103,
+      "severity": "error",
+      "message_en": "Month and year missing.",
+      "message_ja": "月と年が不足しています。",
+      "solution_ja": "日付に月と年も含めて指定してください。",
+      "category": "listing"
+    },
+    "5104": {
+      "code": 5104,
+      "severity": "error",
+      "message_en": "Year missing for provided month.",
+      "message_ja": "月に対する年が不足しています。",
+      "solution_ja": "年も一緒に指定してください。",
+      "category": "listing"
+    },
+    "5106": {
+      "code": 5106,
+      "severity": "error",
+      "message_en": "Month missing for year/day.",
+      "message_ja": "年/日に対する月が不足しています。",
+      "solution_ja": "月も一緒に指定してください。",
+      "category": "listing"
+    },
+    "5107": {
+      "code": 5107,
+      "severity": "error",
+      "message_en": "Dangerous syntax detected.",
+      "message_ja": "危険な構文が検出されました。",
+      "solution_ja": "入力値からスクリプトやSQLインジェクション等の危険な構文を削除してください。",
+      "category": "listing"
+    },
+    "5108": {
+      "code": 5108,
+      "severity": "error",
+      "message_en": "Must provide day, month, year.",
+      "message_ja": "日、月、年をすべて指定する必要があります。",
+      "solution_ja": "完全な日付（年月日）を指定してください。",
+      "category": "listing"
+    },
+    "5109": {
+      "code": 5109,
+      "severity": "error",
+      "message_en": "Attribute version has changed.",
+      "message_ja": "属性のバージョンが変更されました。",
+      "solution_ja": "最新の属性バージョンを取得して使用してください。GetCategorySpecificsで確認できます。",
+      "category": "listing"
+    },
+    "5110": {
+      "code": 5110,
+      "severity": "error",
+      "message_en": "Parent attribute value missing.",
+      "message_ja": "親属性の値が不足しています。",
+      "solution_ja": "親属性の値を先に設定してから子属性を指定してください。",
+      "category": "listing"
+    },
+    "5111": {
+      "code": 5111,
+      "severity": "error",
+      "message_en": "Category not mapped to VCS.",
+      "message_ja": "カテゴリがVCS（Value Category Structure）にマッピングされていません。",
+      "solution_ja": "このカテゴリではItem Specificsの指定方法が異なります。NameValueListを使用してください。",
+      "category": "listing"
+    },
+    "5112": {
+      "code": 5112,
+      "severity": "error",
+      "message_en": "Item specifics don't match category.",
+      "message_ja": "Item Specificsがカテゴリと一致しません。",
+      "solution_ja": "カテゴリに対応した正しいItem Specificsを使用してください。",
+      "category": "listing"
+    },
+    "5113": {
+      "code": 5113,
+      "severity": "error",
+      "message_en": "Child attribute value invalid.",
+      "message_ja": "子属性の値が無効です。",
+      "solution_ja": "親属性の値に対応した有効な子属性の値を指定してください。",
+      "category": "listing"
+    },
+    "5114": {
+      "code": 5114,
+      "severity": "error",
+      "message_en": "Too many values for attribute.",
+      "message_ja": "属性に対する値が多すぎます。",
+      "solution_ja": "Item Specificの値の数を制限内に減らしてください。",
+      "category": "listing"
+    },
+    "5115": {
+      "code": 5115,
+      "severity": "error",
+      "message_en": "Required item specific missing.",
+      "message_ja": "必須のItem Specificが不足しています。",
+      "solution_ja": "カテゴリの必須Item Specificsをすべて設定してください。GetCategorySpecificsで確認できます。",
+      "category": "listing"
+    },
+    "5116": {
+      "code": 5116,
+      "severity": "warning",
+      "message_en": "Item specific dropped, review.",
+      "message_ja": "Item Specificが削除されました。確認してください。",
+      "solution_ja": "出品は処理されましたが、一部のItem Specificが削除されました。出品内容を確認してください。",
+      "category": "listing"
+    },
+    "5117": {
+      "code": 5117,
+      "severity": "warning",
+      "message_en": "Attribute value dropped.",
+      "message_ja": "属性値が削除されました。",
+      "solution_ja": "出品は処理されましたが、一部の属性値が削除されました。",
+      "category": "listing"
+    },
+    "5118": {
+      "code": 5118,
+      "severity": "error",
+      "message_en": "Item specifics specified twice.",
+      "message_ja": "Item Specificsが2回指定されています。",
+      "solution_ja": "重複するItem Specificsを削除し、各項目を1回だけ指定してください。",
+      "category": "listing"
+    },
+    "5119": {
+      "code": 5119,
+      "severity": "warning",
+      "message_en": "New product ID _replaceable_value_.",
+      "message_ja": "新しい商品ID「_replaceable_value_」に更新されました。",
+      "solution_ja": "商品IDが更新されました。新しいIDを確認してください。",
+      "category": "listing"
+    },
+    "5121": {
+      "code": 5121,
+      "severity": "warning",
+      "message_en": "Catalog details changed.",
+      "message_ja": "カタログの詳細が変更されました。",
+      "solution_ja": "eBayカタログの情報が更新されました。出品内容を確認して必要に応じて修正してください。",
+      "category": "listing"
+    },
+    "5122": {
+      "code": 5122,
+      "severity": "warning",
+      "message_en": "Duplicate item specific found.",
+      "message_ja": "重複するItem Specificが見つかりました。",
+      "solution_ja": "重複するItem Specificを削除してください。同じ名前のItem Specificは1つだけ指定してください。",
+      "category": "listing"
+    },
+    "5123": {
+      "code": 5123,
+      "severity": "error",
+      "message_en": "Update product ID.",
+      "message_ja": "商品IDを更新してください。",
+      "solution_ja": "eBayカタログの商品IDが変更されました。最新の商品IDに更新してください。",
+      "category": "listing"
+    },
+    "5124": {
+      "code": 5124,
+      "severity": "warning",
+      "message_en": "Invalid item specific value.",
+      "message_ja": "Item Specificの値が無効です。",
+      "solution_ja": "出品は処理されましたが、一部のItem Specific値が無効です。有効な値に修正することを推奨します。",
+      "category": "listing"
+    },
+    "5125": {
+      "code": 5125,
+      "severity": "error",
+      "message_en": "Item specific dropped, verify.",
+      "message_ja": "Item Specificが削除されました。確認してください。",
+      "solution_ja": "Item Specificが無効なため削除されました。正しいItem Specificを設定してください。",
+      "category": "listing"
+    },
+    "5126": {
+      "code": 5126,
+      "severity": "warning",
+      "message_en": "Dropped due to parent missing.",
+      "message_ja": "親属性が不足しているため削除されました。",
+      "solution_ja": "親属性を先に設定してください。親が設定されていないと子属性も自動的に削除されます。",
+      "category": "listing"
+    },
+    "5127": {
+      "code": 5127,
+      "severity": "warning",
+      "message_en": "Item specifics dropped from listing.",
+      "message_ja": "重複するItem Specificsが出品から削除されました。",
+      "solution_ja": "重複したItem Specificsが自動的に削除されました。出品内容を確認してください。",
+      "category": "listing"
+    },
+    "5128": {
+      "code": 5128,
+      "severity": "error",
+      "message_en": "Invalid item specific found.",
+      "message_ja": "無効なItem Specificが見つかりました。",
+      "solution_ja": "Item SpecificのIDが正しいか確認してください。最新のカテゴリ属性情報を取得してください。",
+      "category": "listing"
+    },
+    "5129": {
+      "code": 5129,
+      "severity": "error",
+      "message_en": "Invalid item specific found.",
+      "message_ja": "無効なItem Specificが見つかりました。",
+      "solution_ja": "Item SpecificのIDが正しいか確認してください。GetCategorySpecificsで最新情報を取得してください。",
+      "category": "listing"
+    },
+    "5130": {
+      "code": 5130,
+      "severity": "warning",
+      "message_en": "Product not recognized by eBay.",
+      "message_ja": "この商品はeBayに認識されていません。",
+      "solution_ja": "商品IDまたはUPC/EAN/ISBN等の識別子が正しいか確認してください。手動でItem Specificsを設定してください。",
+      "category": "listing"
+    },
+    "5131": {
+      "code": 5131,
+      "severity": "warning",
+      "message_en": "Required item specific missing.",
+      "message_ja": "必須のItem Specificが不足しています。",
+      "solution_ja": "カテゴリで必須のItem Specificsを追加してください。不足しているとリスティングの検索表示に影響する可能性があります。",
+      "category": "listing"
+    }
+  }
+}

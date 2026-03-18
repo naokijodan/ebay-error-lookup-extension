@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header-title">eBayエラーしらべる君</h1>
+    </header>
+
+    <div class="search-section">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="エラーコードを入力（例: 240）"
+        autofocus
+      >
+    </div>
+
+    <div id="result-area" class="result-area"></div>
+
+    <footer class="footer">
+      Trading API Error Reference
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
